@@ -1,10 +1,12 @@
-
+import { BrowserRouter } from "react-router-dom"
+import Navbar from "./components/layout/Navbar"
 function App() {
 
   return (
     <div>
-      <h1 className="text-red-800 text-2xl font-bold">Hello</h1>
-
+      <BrowserRouter>
+        <Navbar />
+      </BrowserRouter>
     </div>
   )
 }
