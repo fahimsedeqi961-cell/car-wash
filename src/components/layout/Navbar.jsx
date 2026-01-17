@@ -12,13 +12,13 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <header className='relative p-5 w-full h-auto bg-slate-900 flex flex-row justify-between items-center text-white'>
+    <header className='  p-5 w-full h-auto bg-slate-900 flex flex-row justify-between items-center text-white'>
       <div className='flex  justify-start items-center max-w-200 '>
         <Link to="/">
           <img src={logo} alt="car-wash-logo" className='w-16 h-16 mr-5 hover: transform-stroke object-contain' />
         </Link>
         <div >
-          <h1 className='text-4xl font-bold'>Hnad Car Wash Geel</h1>
+          <h1 className='text-4xl text-orange-400 font-serif font-bold'>Hnad Car Wash Geel</h1>
         </div>
       </div>
 
