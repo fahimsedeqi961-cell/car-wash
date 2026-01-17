@@ -1,14 +1,18 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.webp';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 export default function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto"
+  }, [isOpen]);
+
   return (
-    <header className='p-5 w-full h-auto bg-slate-900 flex flex-row justify-between items-center text-white'>
+    <header className='relative p-5 w-full h-auto bg-slate-900 flex flex-row justify-between items-center text-white'>
       <div className='flex  justify-start items-center max-w-200 '>
         <Link to="/">
           <img src={logo} alt="car-wash-logo" className='w-16 h-16 mr-5 hover: transform-stroke object-contain' />
@@ -20,7 +24,7 @@ export default function Navbar() {
 
       <div className=''>
         <button onClick={() => setIsOpen(!isOpen)}
-          className='md:hidden  text-3xl z-50 '>
+          className='md:hidden text-3xl z-50 w-8 h-8 hover:cursor-pointer   '>
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
       </div>
@@ -41,22 +45,23 @@ export default function Navbar() {
 
 
 
-      {isOpen && (
-        <div className={`absolute top-20 left-0 w-full b-0 md:hiden transition-all duration-300 overflow-hidden  p-5 bg-slate-800  text-white flex flex-col gap-6
-           ${isOpen ? "max-h-200 opacity-100" : "max-h-0 opacity-0"
+      <div
+        className={`absolute top-full left-0 w-full  md:hiden transition-all duration-300 ease-in-out overflow-hidden  p-5 bg-slate-800  text-white flex flex-col gap-6
+           ${isOpen ? "max-h-96 opacity-96 translate-y-0" : "max-h-0 opacity-0 -translate-y-3 pointer-events-auto "
           }`}>
-          <Link to="/" onClick={() => setIsOpen(false)}
-            className='hover:bg-gray-500 p-1 rounded cursor-pointer'>
-            Home
-          </Link>
-          <Link to="/services" onClick={() => setIsOpen(false)} className='hover:bg-gray-500 p-1 rounded cursor-pointer'>Services</Link>
-          <Link to="/book" onClick={() => setIsOpen(false)} className='hover:bg-gray-500 p-1 rounded cursor-pointer'>Book</Link>
-          <Link to="/contact" onClick={() => setIsOpen(false)} className='hover:bg-gray-500 p-1 rounded cursor-pointer'>Contact</Link>
 
-          <Link to="/book" onClick={() => setIsOpen(false)} className='rounded-md px-4 text-center py-2 font-semibold mt-2 bg-orange-500  '>Book Now</Link>
+        <Link to="/" onClick={() => setIsOpen(false)}
+          className='hover:bg-gray-500 p-1 rounded cursor-pointer'>
+          Home
+        </Link>
+        <Link to="/services" onClick={() => setIsOpen(false)} className='hover:bg-gray-500 p-1 rounded cursor-pointer'>Services</Link>
+        <Link to="/book" onClick={() => setIsOpen(false)} className='hover:bg-gray-500 p-1 rounded cursor-pointer'>Book</Link>
+        <Link to="/contact" onClick={() => setIsOpen(false)} className='hover:bg-gray-500 p-1 rounded cursor-pointer'>Contact</Link>
 
-        </div>
-      )}
+        <Link to="/book" onClick={() => setIsOpen(false)} className='rounded-md px-4 text-center py-2 font-semibold mt-2 bg-orange-500  '>Book Now</Link>
+
+      </div>
+
     </header>
 
 
