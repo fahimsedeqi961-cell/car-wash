@@ -12,7 +12,7 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <header className='  p-5 w-full h-auto bg-slate-900 flex flex-row justify-between items-center text-white'>
+    <header className=' relative z-50 p-5 w-full h-auto bg-slate-900 flex flex-row justify-between items-center text-white'>
       <div className='flex  justify-start items-center max-w-200 '>
         <Link to="/">
           <img src={logo} alt="car-wash-logo" className='w-16 h-16 mr-5 hover: transform-stroke object-contain' />
@@ -46,12 +46,14 @@ export default function Navbar() {
 
 
       <div
-        className={`absolute top-full left-0 w-full  md:hiden transition-all duration-300 ease-in-out overflow-hidden  p-5 bg-slate-800  text-white flex flex-col gap-6
+        className={`absolute z-50 top-full left-0 w-full  md:hiden transition-all duration-300 ease-in-out overflow-hidden 
+           p-5 bg-slate-800  text-white flex flex-col gap-6
            ${isOpen ? "max-h-96 opacity-96 translate-y-0" : "max-h-0 opacity-0 -translate-y-3 pointer-events-auto "
           }`}>
 
         <Link to="/" onClick={() => setIsOpen(false)}
-          className='hover:bg-gray-500 p-1 rounded cursor-pointer'>
+          className='hover:bg-gray-500 p-1 rounded cursor-pointer'
+        >
           Home
         </Link>
         <Link to="/services" onClick={() => setIsOpen(false)} className='hover:bg-gray-500 p-1 rounded cursor-pointer'>Services</Link>
