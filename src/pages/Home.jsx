@@ -3,11 +3,17 @@ import { FaStar, FaBolt, FaLeaf, FaGem, FaSmile } from 'react-icons/fa';
 import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.webp'
+import car2 from '../assets/hand.jpg'
+import exteriorwash from '../assets/exteriorwash.webp'
+import interiorwash from '../assets/interiorwash2.webp'
+import fulldetailing from '../assets/cardetailing.webp'
+import { useState } from 'react';
 
 export default function Home() {
+  const [zoom, setZoom] = useState(false);
   return (
     <div className='' >
-      <section className='relative w-full h-[80vh]  border-b'>
+      <section className='relative w-full h-[80vh] '>
 
         <img src={car} alt="background"
           className='w-full h-[80vh] absolute inset-0 z-0  object-cover '
@@ -32,8 +38,10 @@ export default function Home() {
 
       </section>
 
-      <section className='p-10 pt-15 bg-white border-b border-gray-800'>
+      <section className='p-10 bg-white'>
+        <h1 className='text-2xl font-bold md:text-4xl text-orange-500 text-center mb-15 '>Why Hand Car Wash Geel ?</h1>
         <div className=' mx-auto flex flex-col md:flex-row justify-between gap-6 items-center text-center '>
+
 
           <div className='flex flex-col items-center pt-3 p-5 shadow-md rounded w-72 h-auto
              hover:scale-105 hover:shadow-xl hover:-translate-y-1 transform transition duration-300 cursor-pointer '
@@ -107,34 +115,50 @@ export default function Home() {
 
         <div className='text-center'>
 
-          <h1 className='text-3xl font-bold text-orange-500 mb-3 '> Our Services</h1>
-          <p className='text-lg font-semibold '>
+          <h1 className='text-2xl md:text-4xl font-bold text-orange-500 mb-4 '> Our Services</h1>
+          <p className='text-base md:text-lg font-semibold mb-12 '>
             Professional car care services designed to keep your vehicle clean, protected, and shining.
           </p>
 
-          <div className='flex flex-col lg:flex-row gap-6 justify-between mt-5 p-3  text-center items-center '>
+          <div className='flex flex-col md:flex-row gap-6 justify-between mt-5 p-3  text-center items-center '>
 
-            <div className="flex flex-col text-center rounded shadow-md gap-3 p-4 w-72 h-auto hover:scale-105 hover:-translate-y-1 transform transition duration-300 cursor-pointer">
-              <h2 className='text-2xl font-semibold'>Exterior Wash</h2>
-              <p className="text-md  text-gray-800">Thorough exterior cleaning to remove dirt, grime, and road residue.</p>
+            <div className="flex flex-col text-center gap-3 p-4 w-72 h-auto ">
+
+              <h2 className='text-xl md:text-2xl font-semibold text-orange-500 mb-4'>Exterior Wash</h2>
+              <img src={exteriorwash} alt="not found"
+                className='h-86  ' />
+              <p className="text-base md:text-lg text-gray-800 mb-2">Thorough exterior cleaning to remove dirt, grime, and road residue.</p>
             </div>
 
-            <div className="flex flex-col text-center rounded shadow-md  gap-3 p-4 w-72 h-auto hover:scale-105 hover:-translate-y-1 transform transition duration-300 cursor-pointer">
-              <h2 className='text-2xl font-semibold '> Interior Cleaning</h2>
-              <p className="text-md pb-5  text-gray-800">Deep cleaning of seats, carpets, dashboard, and interior surfaces.</p>
+
+            <div className="flex flex-col text-center gap-3 p-4 w-72 h-auto ">
+              <h2 className='text-xl md:text-2xl font-semibold text-orange-500 mb-4 '> Interior Cleaning</h2>
+              <img src={interiorwash} alt="not found"
+                className='h-86 '
+              />
+              <p className="text-base md:text-lg pb-5  text-gray-800 ">Deep cleaning of seats, carpets, dashboard, and interior surfaces.</p>
+
             </div>
 
-            <div className="flex flex-col gap-3 text-center rounded-md shadow-md p-4 w-72 h-auto hover:scale-105 hover:-translate-y-1 transform transition duration-300 cursor-pointer">
-              <h2 className='text-2xl font-semibold'>Full Car Detailing</h2>
-              <p className="text-md pb-5 text-gray-800">Complete inside-and-out detailing for a fresh, showroom-ready finish.</p>
+            <div className="flex flex-col gap-3 text-center p-4 w-72 h-auto">
+              <h2 className='text-xl md:text-2xl font-semibold text-orange-500 mb-4'>Full Car Detailing</h2>
+              <img src={fulldetailing} alt="not found"
+                className='h-86'
+              />
+              <p className="text-base md:text-lg pb-5 text-gray-800">Complete inside-and-out detailing for a fresh, showroom-ready finish.</p>
+
             </div>
-            <div className="flex flex-col gap-3 text-center rounded-md shadow-md p-4 w-72 h-auto hover:scale-105 hover:-translate-y-1 transform transition duration-300 cursor-pointer">
-              <h2 className='text-2xl font-semibold '>Engine Premium Care</h2>
-              <p className="text-md  text-gray-800">Careful engine bay and premium treatments for enhanced performance and protection.</p>
+
+            <div className="flex flex-col gap-3 text-center p-4 w-72 h-auto ">
+              <h2 className='text-xl md:text-2xl font-semibold text-orange-500 mb-4'>Engine Premium Care</h2>
+              <img src={car2} alt="not found"
+                className='w-full h-86 '
+              />
+              <p className="text-base md:text-lg  text-gray-800 ">Careful engine bay and premium treatments for enhanced performance and protection.</p>
             </div>
           </div>
 
-          <Link to="/services" className="text-orange-500 mt-8 inline-block text-lg hover:text-orange-600 hover:underline cursor-pointer">View Services</Link>
+          <Link to="/services" className="text-gray-800-500 mt-8  px-4 py-2 inline-block text-xl border rounded-3xl hover:text-orange-600  cursor-pointer">View Services</Link>
 
         </div>
       </section>
@@ -142,7 +166,7 @@ export default function Home() {
 
         <div className='max-w-6xl mx-auto'>
 
-          <h2 className='text-3xl font-bold text-center mb-4 text-orange-500'>Our Location</h2>
+          <h2 className='text-2xl md:text-4xl font-bold text-center mb-4 text-orange-500'>Our Location</h2>
           <p className='text-xl text-center text-gray-700 mb-6'>
             Visit our car wash or Find us easily on the map
           </p>
@@ -167,7 +191,7 @@ export default function Home() {
             <div className='flex flex-row items-center gap-4'>
               <img src={logo} alt="not found" className='w-18 h-18 ' />
               <div className=''>
-                <h2 className='text-xl font-bold text-orange-500  font-serif'>Hand Car Wash Geel</h2>
+                <h2 className='text-xl md:text-2xl font-bold text-orange-500  font-serif'>Hand Car Wash Geel</h2>
               </div>
             </div>
             <p className='text-gray-400 mt-2 '>Professional car cleaning services with quality and care.</p>
