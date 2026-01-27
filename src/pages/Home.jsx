@@ -9,8 +9,17 @@ import interiorwash from '../assets/interiorwash2.webp'
 import fulldetailing from '../assets/cardetailing.webp'
 import { useState } from 'react';
 
+
 export default function Home() {
+  const [selectedImage, setSelectedImage] = useState(null);
   const [zoom, setZoom] = useState(false);
+
+  const services = [
+    { id: "1", name: "Exterior Wash", image: `${exteriorwash}`, description: "Thorough exterior cleaning to remove dirt, grime, and road residue." },
+    { id: "2", name: "Interior Wash", image: `${interiorwash}`, description: "Deep cleaning of seats, carpets, dashboard, and interior surfaces." },
+    { id: "3", name: "Full Detailing ", image: `${fulldetailing}`, description: "Complete inside-and-out detailing for a fresh, showroom-ready finish." },
+    { id: "4", name: "Engine care  Wash", image: `${car2}`, description: "Careful engine bay and premium treatments for enhanced performance and protection." }
+  ]
   return (
     <div className='' >
       <section className='relative w-full h-[80vh] '>
@@ -120,48 +129,51 @@ export default function Home() {
             Professional car care services designed to keep your vehicle clean, protected, and shining.
           </p>
 
-          <div className='flex flex-col md:flex-row gap-6 justify-between mt-5 p-3  text-center items-center '>
+          {/**Services */}
 
-            <div className="flex flex-col text-center gap-3 p-4 w-72 h-auto ">
+          <div className='p-5 grid drid-cols-1 md:grid-cols-4 items-center justify-center gap-6'>
+            {services.map(service => (
+              <div key={service.id} className='h-full flex flex-col gap-4 items-center  rounded-md bg-white'>
 
-              <h2 className='text-xl md:text-2xl font-semibold text-orange-500 mb-4'>Exterior Wash</h2>
-              <img src={exteriorwash} alt="not found"
-                className='h-86  ' />
-              <p className="text-base md:text-lg text-gray-800 mb-2">Thorough exterior cleaning to remove dirt, grime, and road residue.</p>
-            </div>
+                <h2 className='text-xl md:text-2xl font-semibold text-orange-500 mb-6'> {service.name}</h2>
+                <img
+                  src={service.image} alt={service.name}
+                  onClick={() => {
+                    setSelectedImage(service.image);
+                    setTimeout(() => setZoom(true), 10);
+                  }}
+                  className='w-full h-86 object-cover  transition-transform  duration-300 cursor-pointer ease-in-out hover:scale-105'
+                />
 
+                <p className='text-base md:text-lg text-gray-800 flex-grow'>{service.description}</p>
 
-            <div className="flex flex-col text-center gap-3 p-4 w-72 h-auto ">
-              <h2 className='text-xl md:text-2xl font-semibold text-orange-500 mb-4 '> Interior Cleaning</h2>
-              <img src={interiorwash} alt="not found"
-                className='h-86 '
-              />
-              <p className="text-base md:text-lg pb-5  text-gray-800 ">Deep cleaning of seats, carpets, dashboard, and interior surfaces.</p>
-
-            </div>
-
-            <div className="flex flex-col gap-3 text-center p-4 w-72 h-auto">
-              <h2 className='text-xl md:text-2xl font-semibold text-orange-500 mb-4'>Full Car Detailing</h2>
-              <img src={fulldetailing} alt="not found"
-                className='h-86'
-              />
-              <p className="text-base md:text-lg pb-5 text-gray-800">Complete inside-and-out detailing for a fresh, showroom-ready finish.</p>
-
-            </div>
-
-            <div className="flex flex-col gap-3 text-center p-4 w-72 h-auto ">
-              <h2 className='text-xl md:text-2xl font-semibold text-orange-500 mb-4'>Engine Premium Care</h2>
-              <img src={car2} alt="not found"
-                className='w-full h-86 '
-              />
-              <p className="text-base md:text-lg  text-gray-800 ">Careful engine bay and premium treatments for enhanced performance and protection.</p>
-            </div>
+              </div>
+            ))}
           </div>
+
+          {selectedImage && (
+            <div
+              onClick={() => {
+                setZoom(false);
+                setTimeout(() => setSelectedImage(null), 200)
+              }}
+              className='fixed flex inset-0 bg-black bg-opacity-70 transition-opacity duration-300 items-center justify-center  z-50'>
+              <img
+                src={selectedImage}
+
+                alt="full size"
+                className={`'max-w-full max-h-full object-cover rounded transition-transform duration-500 ease-linear '
+                  ${zoom ? "scale-100" : "scale-90"}`}
+              />
+            </div>
+          )}
 
           <Link to="/services" className="text-gray-800-500 mt-8  px-4 py-2 inline-block text-xl border rounded-3xl hover:text-orange-600  cursor-pointer">View Services</Link>
 
         </div>
       </section>
+
+
       <section className='p-5 mt-6 bg-white'>
 
         <div className='max-w-6xl mx-auto'>
