@@ -8,11 +8,12 @@ import exteriorwash from '../assets/exteriorwash.webp'
 import interiorwash from '../assets/interiorwash2.webp'
 import fulldetailing from '../assets/cardetailing.webp'
 import { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [zoom, setZoom] = useState(false);
+  const navigate = useNavigate();
 
   const services = [
     { id: "1", name: "Exterior Wash", image: `${exteriorwash}`, description: "Thorough exterior cleaning to remove dirt, grime, and road residue." },
@@ -22,6 +23,7 @@ export default function Home() {
   ]
   return (
     <div className='' >
+      {/**Hero section  */}
       <section className='relative w-full h-[80vh] '>
 
         <img src={car} alt="background"
@@ -40,14 +42,16 @@ export default function Home() {
             With our attention to detail and commitment to customer satisfaction,
             you can trust us to take care of your car.
           </p>
-          <button className=' px-4 py-2 text-sm md:text-base rounded bg-orange-400 text-white font-semibold  hover:bg-orange-600 transition-colors duration-200 cursor-pointer '>
+          <button onClick={() => navigate("/book")}
+            className=' px-4 py-2 text-sm md:text-base rounded bg-orange-400 text-white font-semibold  hover:bg-orange-600 transition-colors duration-200 cursor-pointer '>
             Book Now
           </button>
         </div>
 
       </section>
 
-      <section className='p-10 bg-white'>
+      {/*Trust signals Section */}
+      <section className='p-10 shadow-md bg-white'>
         <h1 className='text-2xl font-bold md:text-4xl text-orange-500 text-center mb-15 '>Why Hand Car Wash Geel ?</h1>
         <div className=' mx-auto flex flex-col md:flex-row justify-between gap-6 items-center text-center '>
 
@@ -120,6 +124,7 @@ export default function Home() {
 
       </section>
 
+      {/**Services Section */}
       <section className='p-5 bg-white mt-6'>
 
         <div className='text-center'>
@@ -145,7 +150,7 @@ export default function Home() {
                   className='w-full h-86 object-cover  transition-transform  duration-300 cursor-pointer ease-in-out hover:scale-105'
                 />
 
-                <p className='text-base md:text-lg text-gray-800 flex-grow'>{service.description}</p>
+                <p className='text-base md:text-lg text-gray-800 grow'>{service.description}</p>
 
               </div>
             ))}
@@ -173,6 +178,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/**location map */}
 
       <section className='p-5 mt-6 bg-white'>
 
@@ -183,7 +189,7 @@ export default function Home() {
             Visit our car wash or Find us easily on the map
           </p>
 
-          <div className="w-full h-[400px] rounded-md  shadow-lg border overflow-hidden ">
+          <div className="w-full h-100 rounded-md  shadow-lg border overflow-hidden ">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d640795.2577214325!2d4.951332056242475!3d51.143387600194885!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c14f1c32f57d41%3A0x3a5dbd4599d869f4!2sHand%20Car%20Wash%20Geel!5e0!3m2!1sen!2s!4v1769023775021!5m2!1sen!2s"
               className='w-full h-full '
