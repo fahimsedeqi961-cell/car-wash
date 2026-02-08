@@ -1,9 +1,10 @@
-import HeroImage from '../assets/HeroImage6.png'
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import HeroImage from '../assets/HeroImage.jpg'
 import ExteriorWash from '../assets/ExteriorWash1.jpg';
 import InteriorWash from '../assets/InteriorWash2.webp';
 import FullDetailing from '../assets/FullDetailing3.jpg';
-import review1 from '../assets/heroImage.jpg';
-import review3 from '../assets/review5.jpg';
+import review1 from '../assets/review4.jpg';
+import review3 from '../assets/waxing.jpg';
 import review4 from '../assets/heroImage2.jpg'
 import waxing from '../assets/waxing2.jpg'
 import myImage from '../assets/myImage.png'
@@ -39,51 +40,80 @@ export default function Home() {
   ]
 
   return (
-    <div className='bg-gradient-to-r from-cyan-500 via-sky-400 to-blue-500' >
+    <div >
 
       {/**Hero section */}
 
-      <section className=' border-2 border-white'>
-        <div className="relative grid grid-cols-2 gap-4  items-center">
+      <section className='md:min-h-[80vh] border-b border-white md:mb-16 '>
 
-          <div className="flex flex-col gap-2 pl-2 md:gap-6 md:pl-4 items-start  ">
+        <div className="relative grid md:grid-cols-2 gap-10 overflow-hidden md:py-8 ">
 
-            <h1 className="text-2xl font-sans md:text-5xl md:leading-relaxed font-bold text-white">Your cars deserves better than machines</h1>
-            <p className="text-lg md:text-xl text-white ">
+          {/* Text column */}
+
+          <div
+            className="relative z-20 flex flex-col gap-4 md:gap-8 p-6 lg:py-16 
+                text-center items-center md:items-start
+                 md:text-left  md:bg-white 
+                text-white md:text-black"
+          >
+
+            <h1 className="text-2xl font-sans md:text-5xl text-orange-400 font-bold lg:leading-snug">
+              Your car deserves better than machines
+            </h1>
+
+            <p className="text-base md:text-xl  md:text-black max-w-md md:max-w-xl">
               We wash by hand, the way it should be done. Every detail matters when
               it comes to protecting what you own.
             </p>
-            <button className="px-6 py-2 ml-6 mt-8 rounded bg-orange-400 hover:bg-orange-500  text-white font-bold cursor-pointer">
+
+            <a href='/book'
+              className="w-fit px-6 py-2 mt-4 rounded-3xl bg-orange-400 hover:bg-orange-500  text-white font-bold cursor-pointer">
               Book
-            </button >
+            </a>
+
           </div>
 
-          <img src={HeroImage} alt="Hero Image" className='w-full h-[60vh] md:h-[85vh]  object-cover inset-0' />
-        </div>
+          <div className='absolute inset-0 md:relative z-10 md:z-0 md:mr-6 '>
 
+            <img
+              src={HeroImage}
+              alt="Hero Image"
+              className=' z-0 w-full h-full md:h-[70vh] object-cover md:rounded-md md'
+            />
+
+            <div className='absolute inset-0 bg-slate-900/60 md:hidden '></div>
+
+          </div>
+        </div>
       </section>
 
       {/**Services Section*/}
 
-      <section className='bg-gradient-to-r from-blue-500 to-cyan-500  px-6 py-12'>
-
+      <section className='bg-slate-900 md:mx-6 mb-16 py-12 md:rounded-lg shadow-lg p-4 md:p-6 '>
         <div className=''>
-          <div className='flex flex-col items-center text-white gap-2 p-2 justify-center'>
-            <h1 className='text-lg md:text-2xl text-center'>Services</h1>
-            <h1 className='text-lg font-bold md:text-4xl text-center'>What we do best</h1>
-            <p className='text-xl text-center'>Four ways to keep your car looking sharp</p>
+
+          <div className='flex flex-col items-center text-white gap-4 justify-center'>
+            <h1 className='text-base md:text-2xl text-center'>Services</h1>
+            <h1 className='text-2xl font-bold md:text-3xl text-center'>What we do best</h1>
+            <p className='text-lg text-center'>Four ways to keep your car looking sharp</p>
           </div>
 
-          <div className='grid grid-row md:grid-cols-4  gap-4 mt-20 items-center justify-center '>
+          <div className='grid grid-row md:grid-cols-2 lg:grid-cols-4 gap-4 py-12 items-center justify-center '>
             {services.map((service, index) => (
+
               <div key={index} className='flex flex-col border text-white rounded-md gap-6 justify-center items-start hover:scale-105 hover:-translate-y-1 transform transition duration-300  '>
-                <img src={service.image} alt={service.serviceName} className='w-full h-48 rounded-t-lg object-cover transform transition  duration-300 cursor-pointer ' />
-                <div className='px-4 '>
-                  <h2 className='text-base mb-2  '>{service.serviceName}</h2>
-                  <h3 className='text-lg font-semibold md:text-xl  w-48 mb-2'>{service.title}</h3>
-                  <p className='text-base  text-white '>{service.description}</p>
+                <img
+                  src={service.image} alt={service.serviceName}
+                  className='w-full h-48 rounded-t-lg object-cover transform transition  duration-300 cursor-pointer '
+                />
+
+                <div className='px-4 text-white'>
+                  <h2 className='text-base mb-4  '>{service.serviceName}</h2>
+                  <h3 className='text-lg font-semibold md:text-xl  w-48 mb-4'>{service.title}</h3>
+                  <p className='text-base w-62 '>{service.description}</p>
                 </div>
-                <a href="#" className='px-4 pb-4'>
+
+                <a href="/services" className='px-4 pb-4'>
                   Learn
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-white text-semibold  inline-block">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -99,29 +129,47 @@ export default function Home() {
 
       {/* Reviews sections */}
 
-      <section className=' p-6 pt-15 pb-10 bg-gradient-to-br from-cyan-500 via-purple-500 to-blue-500 border-2 border-purple-700'>
-        <div>
-          <div className='flex flex-col text-white items-center gap-2 justify-center text-gray-orange-400'>
-            <h1 className='text-lg md:text-xl text-center'>Why</h1>
-            <h1 className='text-lg font-bold md:text-4xl text-center '>We do it right</h1>
-            <p className='text-lg md:text-xl font-semibold text-center'>Hand washing beats machines every time for real results.</p>
+      <section className='md:mx-6 py-12 md:rounded-lg mb-16 shadow-lg bg-gray-200 min-h-[50vh] md:min-h-[80vh]'>
+
+        <div className='px-4 '>
+          <div className='flex flex-col gap-4 text-black items-center text-center justify-center'>
+            <h1 className='text-lg md:text-xl'>Why</h1>
+            <h1 className='text-2xl font-bold md:text-3xl '>We do it right</h1>
+            <p className='text-base font-semibold md:text-xl '>Hand washing beats machines every time for real results.</p>
           </div>
 
-          <div className='grid grid-row md:grid-cols-[2fr_1fr_1fr] gap-4 mt-20   '>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] gap-4 py-8 '>
 
             {reviews.map((review, index) => (
 
-              <div key={index} className='relative'>
-                <img src={review.image} alt="Not found" className='absolute w-full h-full object-cover inset-0 z-0' />
+              <div
+                key={index}
+                className={`relative overflow-hidden rounded-md min-h-[350px] flex 
+                  ${index === 0 ? 'md:col-span-1 lg:col-span-1' : 'md:col-span-1'
+                  }`}
+              >
+                {/* Background Image */}
+                <img
+                  src={review.image}
+                  alt="review.title"
+                  className='absolute w-full h-full object-cover inset-0 z-0'
+                />
 
-                <div key={index} className='flex flex-col gap-4 text-white pl-8 py-8 text-left border rounded-md '>
-                  <div className='absolute inset-0 bg-black/40'></div>
-                  <h1 className='text-lg md:text-3xl font-bold w-75 z-30 '>{review.title}</h1>
-                  <p className='text-base md:text-lg z-50 font-medium grow max-w-6xl mb-8'>{review.description}</p>
+                {/*Overlay  */}
+                <div className='absolute inset-0 z-10 bg-black/40'></div>
 
-                  <a href="#" className='z-30 text-lg'>
+                {/* Content */}
+                <div className='relative z-20 flex flex-col gap-4 md:gap-6 
+                  text-white p-4 md:p-6 w-full justify-center 
+                    text-center items-center lg:items-start lg:text-left border rounded-md '
+                >
+                  <h1 className='text-xl md:text-2xl font-bold md:w-60 lg:max-w-[280px] '>{review.title}</h1>
+                  <p className='text-base font-medium opacity-90 mb-4'>{review.description}</p>
+
+                  <a href="#" className='group flex items-center gap-1 text-lg font-semibold mt-8 hover:text-orange-400 transition-colors '>
                     Learn
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-white text-semibold  inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+                      className="size-4 text-semibold text-white transition-transform group-hover:translate-x-1">
                       <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                     </svg>
                   </a>
@@ -134,17 +182,27 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='p-10 bg-gradient-to-r from-purple-500  to-blue-500'>
-        <div className='p-10'>
-          <div className='flex flex-row gap-8 justify-between text-white items-center'>
-            <div>
+      {/* Customers somments */}
+      <section className='py-8 md:py-16 mx-6 mb-16 rounded-md shadow-md bg-slate-900 min-h-[50vh] md:min-h-[90vh]'>
+        <div className='relative w-full'>
+
+          <div className='flex flex-col md:flex-row gap-8 md:gap-16 justify-between p-8 mb-8 md:mb-20 text-white md:items-center'>
+
+            <div className=''>
               <p className='text-lg md:text-xl  font-semibold mb-2'> Numbers</p>
-              <h1 className='text-lg md:text-4xl font-bold w-80'>Built on trust and results</h1>
+              <h1 className='text-lg md:text-3xl font-bold max-w-md'>Built on trust and results</h1>
             </div>
-            <div>
-              <p className='text-lg md:text-xl font-semibold mb-4 w-150 leading-relaxed'> We have washed thousands of cars, our customers come back because they see the different. that is what the numbers tells us.</p>
-              <a href="#" className='text-lg font-bold mr-6 hover:text-orange-400 '>Book</a>
-              <a href="#" className='text-lg font-bold  hover:text-orange-400 '>
+
+            <div className=''>
+              <p className='text-base md:text-xl font-semibold mb-4 md:w-180 leading-relaxed '>
+                We have washed thousands of cars, our customers come back because they see the different.
+                that is what the numbers tells us.
+              </p>
+              <a href="#" className='text-lg font-bold mr-6 hover:text-orange-500'>
+                Book
+              </a>
+
+              <a href="#" className='text-lg font-bold hover:text-orange-400 '>
                 Learn
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-white text-semibold  inline-block">
                   <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -152,15 +210,13 @@ export default function Home() {
               </a>
 
             </div>
-
           </div>
 
-          <div className='grid grid-cols-3 gap-6 items-center mt-20 text-white'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-center items-end text-black px-8'>
             {testiMonials.map((test, index) => (
-              <div key={index}>
+              <div key={index} className=' bg-gray-200 rounded-md p-2'>
                 <h1 className='text-lg md:text-4xl font-bold leading-relaxed mb-2'>{test.numbers}</h1>
-                <p className='text-lg md:text-xl font-semibold'>{test.decription}</p>
-
+                <p className='text-base md:text-xl font-semibold'>{test.decription}</p>
               </div>
             ))}
 
@@ -169,17 +225,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='border-b bg-blue-500 text-white'>
-        <div className='p-20'>
+      {/* testimonials section */}
 
-          <h1 className='text-xl md:text-4xl font-bold mb-4 '>Real Voices</h1>
-          <p className='text-lg md:tex-xl font-semibold '>What our customers say about us</p>
+      <section className='mx-6 shadow-xl py-16 mb-16 rounded-md bg-gray-100 text-black'>
+        <div>
 
-          <div className='grid grid-cols-3 gap-8  items-center mt-20 '>
+          <h1 className='text-xl md:text-4xl font-bold mb-4 text-center '>Real Voices</h1>
+          <p className='text-lg md:tex-xl font-semibold text-center '>What our customers say about us</p>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 items-center mt-20 '>
 
             {Profiles.map((profile, index) => (
-              <div key={index} className='border rounded-md p-3'>
-                <p className='text-lg w-80 mb-4'>{profile.comment}</p>
+              <div key={index} className='border rounded-md p-4 bg-slate-900 text-white'>
+                <p className='text-base md:w-80 mb-4'>{profile.comment}</p>
                 <div className='flex flex-row gap-4 mb-10  '>
                   <div>
                     <img src={profile.image} alt="Profile" className='w-15 h-15 rounded-4xl' />
@@ -187,12 +245,14 @@ export default function Home() {
                   </div>
                   <div >
                     <h2 className='font-bold text-lg '>{profile.name}</h2>
-                    <p className='text-lg'>{profile.info}</p>
+                    <p className='text-base md:text-lg'>{profile.info}</p>
                   </div>
                 </div>
-                <a href="#">
+
+                <a href="#" className='hover:underline '>
                   View full story
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-black text-semibold  inline-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+                    className="size-4  text-semibold text-white inline-block">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                   </svg>
                 </a>
@@ -204,30 +264,38 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className='bg-black text-white'>
-        <div className='px-20 py-10'>
-          <h2 className='text-xl md:text-3xl font-bold mb-2'>Stay Informed always</h2>
-          <p className='text-lg'>Get updates on our latest offers and cleaning tips.</p>
-          <div className='grid grid-cols-5 gap-8 mt-20 pb-10'>
+      {/* Footer */}
 
-            <div className='flex flex-row gap-4'>
+      <footer className='bg-slate-900 text-white'>
+        <div className='px-12 py-20'>
+
+          <h2 className='text-xl md:text-3xl font-bold mb-4'>Stay Informed always</h2>
+          <p className='text-lg'>Get updates on our latest offers and cleaning tips.</p>
+
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-10 py-16 ">
+            <div className='col-span-2 md:col-span-1 flex flex-row gap-4 '>
               <a href="/" >
-                <img src={logo} alt="Logo" className='w-15 h-15  ' />
+                <img src={logo} alt="Logo" className='w-16 h-16  ' />
               </a>
               <h1 className='text-4xl font-bold text-orange-400'>Geel</h1>
             </div>
 
-            <div className='flex flex-col gap-2 items-start justify-between'>
-              <h2 className='text-lg mf:text-2xl font-bold'>Services</h2>
-              <a href="">Interior wash</a>
+
+            <div className='flex flex-col space-y-3 items-start justify-between'>
+              <h2 className='text-lg mf:text-2xl font-bold mb-4'>
+                Services
+              </h2>
+              <a href="" className='hover:text-orange-400 transition-colors'>
+                Interior wash
+              </a>
               <a href="">Exterior wash</a>
               <a href="">Full Detailing</a>
               <a href="">Waxing</a>
               <a href="">Service details</a>
             </div>
 
-            <div className='flex flex-col gap-2 items-start justify-between'>
-              <h2 className='text-lg mf:text-2xl font-bold'>Company</h2>
+            <div className='flex flex-col space-y-3 items-start justify-between'>
+              <h2 className='text-lg mf:text-2xl font-bold mb-4'>Company</h2>
               <a href="">About us</a>
               <a href="">Our process</a>
               <a href="">Why choose us</a>
@@ -235,8 +303,8 @@ export default function Home() {
               <a href="">Get in touch</a>
             </div>
 
-            <div className='flex flex-col gap-2 items-start justify-between'>
-              <h2 className='text-lg mf:text-2xl font-bold'>Suport</h2>
+            <div className='flex flex-col space-y-3 items-start justify-between'>
+              <h2 className='text-lg mf:text-2xl font-bold mb-4'>Suport</h2>
               <a href="">Help center</a>
               <a href="">FAQ</a>
               <a href="">Booking help</a>
@@ -244,8 +312,8 @@ export default function Home() {
               <a href="">Track your order</a>
             </div>
 
-            <div className='flex flex-col gap-2 items-start justify-between'>
-              <h2 className='text-lg mf:text-2xl font-bold'>Contact</h2>
+            <div className='flex flex-col spac-y-3 items-start justify-between'>
+              <h2 className='text-lg mf:text-2xl font-bold mb-4'>Contact</h2>
               <a href="">Facebook</a>
               <a href="">Instagram</a>
               <a href="">Twitter</a>
@@ -255,8 +323,26 @@ export default function Home() {
 
           </div>
 
-          <div className='p-2 border-t text-center'>
-            <h2>© 2026 Hand Car Wash Geel</h2>
+          <div className='py-6 border-t grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
+            <h2 className='text-center md:text-start'>© 2026 Hand Car Wash Geel</h2>
+
+            <div className='flex flex-row gap-6 justify-center md:justify-end px-12 '>
+              <a href="" className=''>
+                <FaFacebook className='text-2xl hover:text-blue-500 ' />
+              </a>
+
+              <a href="">
+                <FaInstagram className='text-2xl  hover:text-red-400' />
+              </a>
+
+              <a href="">
+                <FaTwitter className='text-2xl hover:text-sky-300 ' />
+              </a>
+
+              <a href="">
+                <FaLinkedin className='text-2xl hover:text-blue-400 ' />
+              </a>
+            </div>
           </div>
         </div>
 
