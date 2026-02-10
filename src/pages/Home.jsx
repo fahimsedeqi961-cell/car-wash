@@ -1,4 +1,3 @@
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import HeroImage from '../assets/HeroImage.jpg'
 import ExteriorWash from '../assets/ExteriorWash1.jpg';
 import InteriorWash from '../assets/InteriorWash2.webp';
@@ -10,7 +9,6 @@ import waxing from '../assets/waxing2.jpg'
 import myImage from '../assets/myImage.png'
 import Marcus from '../assets/Marcus.png'
 import james from '../assets/james.png'
-import logo from '../assets/Logo3.jpeg'
 
 export default function Home() {
 
@@ -28,9 +26,9 @@ export default function Home() {
   ];
 
   const testiMonials = [
-    { numbers: "5000+", decription: "Cars cleaned annualy" },
-    { numbers: "95%", decription: "Customer satisfaction rate " },
-    { numbers: "10", decription: "Years in the business" },
+    { icon: "fa-car", numbers: "5000+", decription: "Cars cleaned annualy" },
+    { icon: "fa-user-tie", numbers: "95%", decription: "Customer satisfaction rate " },
+    { icon: "fa-tools", numbers: "10", decription: "Years in the business" },
   ];
   const Profiles = [
     { comment: "My car looks better than the day I bought it. that is not an exaggeration.", image: myImage, name: "Fahim khan", info: "Car owner, Seattel" },
@@ -44,7 +42,7 @@ export default function Home() {
 
       {/**Hero section */}
 
-      <section className='md:min-h-[80vh] border-b border-white md:mb-16 '>
+      <section className='md:min-h-[80vh] border-b border-[#333] md:mb-16 '>
 
         <div className="relative grid md:grid-cols-2 gap-10 overflow-hidden md:py-8 ">
 
@@ -66,12 +64,20 @@ export default function Home() {
               it comes to protecting what you own.
             </p>
 
-            <a href='/book'
-              className="w-fit px-6 py-2 mt-4 rounded-3xl bg-orange-400 hover:bg-orange-500  text-white font-bold cursor-pointer">
-              Book
-            </a>
+            <div className='flex flex-row gap-8'>
+              <a href='/book'
+                className="px-6 py-2 mt-4 ml-2 rounded-3xl bg-orange-400 hover:bg-orange-500  text-white font-bold cursor-pointer">
+                Book Now
+              </a>
+              <a href='/book'
+                className="px-6 py-2 mt-4 hidden md:inline-block  rounded-3xl border hover:bg-orange-500 hover:text-white  text-black font-bold cursor-pointer transition-colors duration-300">
+                Learn More
+              </a>
 
+            </div>
           </div>
+
+
 
           <div className='absolute inset-0 md:relative z-10 md:z-0 md:mr-6 '>
 
@@ -89,10 +95,10 @@ export default function Home() {
 
       {/**Services Section*/}
 
-      <section className='bg-slate-900 md:mx-6 mb-16 py-12 md:rounded-lg shadow-lg p-4 md:p-6 '>
+      <section className='bg-white py-12 p-4 md:p-6 '>
         <div className=''>
 
-          <div className='flex flex-col items-center text-white gap-4 justify-center'>
+          <div className='flex flex-col items-center text-orange-400 gap-4 justify-center'>
             <h1 className='text-base md:text-2xl text-center'>Services</h1>
             <h1 className='text-2xl font-bold md:text-3xl text-center'>What we do best</h1>
             <p className='text-lg text-center'>Four ways to keep your car looking sharp</p>
@@ -101,13 +107,13 @@ export default function Home() {
           <div className='grid grid-row md:grid-cols-2 lg:grid-cols-4 gap-4 py-12 items-center justify-center '>
             {services.map((service, index) => (
 
-              <div key={index} className='flex flex-col border text-white rounded-md gap-6 justify-center items-start hover:scale-105 hover:-translate-y-1 transform transition duration-300  '>
+              <div key={index} className='flex flex-col border text-black bg-slate-100 rounded-md gap-6 justify-center items-start hover:scale-105 hover:-translate-y-1 transform transition duration-300  '>
                 <img
                   src={service.image} alt={service.serviceName}
                   className='w-full h-48 rounded-t-lg object-cover transform transition  duration-300 cursor-pointer '
                 />
 
-                <div className='px-4 text-white'>
+                <div className='px-4 text-black'>
                   <h2 className='text-base mb-4  '>{service.serviceName}</h2>
                   <h3 className='text-lg font-semibold md:text-xl  w-48 mb-4'>{service.title}</h3>
                   <p className='text-base w-62 '>{service.description}</p>
@@ -129,10 +135,10 @@ export default function Home() {
 
       {/* Reviews sections */}
 
-      <section className='md:mx-6 py-12 md:rounded-lg mb-16 shadow-lg bg-gray-200 min-h-[50vh] md:min-h-[80vh]'>
+      <section className='py-12 border-b min-h-[50vh] md:min-h-[80vh]'>
 
         <div className='px-4 '>
-          <div className='flex flex-col gap-4 text-black items-center text-center justify-center'>
+          <div className='flex flex-col gap-4 text-orange-400 items-center text-center justify-center'>
             <h1 className='text-lg md:text-xl'>Why</h1>
             <h1 className='text-2xl font-bold md:text-3xl '>We do it right</h1>
             <p className='text-base font-semibold md:text-xl '>Hand washing beats machines every time for real results.</p>
@@ -183,40 +189,46 @@ export default function Home() {
       </section>
 
       {/* Customers somments */}
-      <section className='py-8 md:py-16 mx-6 mb-16 rounded-md shadow-md bg-slate-900 min-h-[50vh] md:min-h-[90vh]'>
-        <div className='relative w-full'>
+      <section className='py-16 '>
+        <div className='w-full'>
 
-          <div className='flex flex-col md:flex-row gap-8 md:gap-16 justify-between p-8 mb-8 md:mb-20 text-white md:items-center'>
+          <div className='flex flex-col gap-4 items-center text-center'>
 
-            <div className=''>
-              <p className='text-lg md:text-xl  font-semibold mb-2'> Numbers</p>
-              <h1 className='text-lg md:text-3xl font-bold max-w-md'>Built on trust and results</h1>
-            </div>
+            <p className='text-lg md:text-xl text-orange-400 font-semibold'> Numbers</p>
 
-            <div className=''>
-              <p className='text-base md:text-xl font-semibold mb-4 md:w-180 leading-relaxed '>
-                We have washed thousands of cars, our customers come back because they see the different.
-                that is what the numbers tells us.
-              </p>
-              <a href="#" className='text-lg font-bold mr-6 hover:text-orange-500'>
-                Book
-              </a>
+            <h1 className='text-lg md:text-3xl font-bold text-orange-400 '>
+              Built on trust and results
+            </h1>
 
-              <a href="#" className='text-lg font-bold hover:text-orange-400 '>
-                Learn
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-white text-semibold  inline-block">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                </svg>
-              </a>
+            <p className='text-base md:text-xl mb-4 text-center max-w-xl '>
+              We have washed thousands of cars,
+              our customers come back because they see the different.
+              that is what the numbers tells us.
+            </p>
 
-            </div>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-center items-end text-black px-8'>
+          <div className='text-center mb-16'>
+            <a href="#" className='text-lg font-semibold text-gray-600 mr-6 hover:text-orange-500'>
+              Book
+            </a>
+
+            <a href="#" className='text-lg font-semibold text-gray-600 hover:text-orange-400 '>
+              Learn
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-black text-semibold  inline-block">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-3  text-center items-end text-black px-8'>
             {testiMonials.map((test, index) => (
-              <div key={index} className=' bg-gray-200 rounded-md p-2'>
-                <h1 className='text-lg md:text-4xl font-bold leading-relaxed mb-2'>{test.numbers}</h1>
-                <p className='text-base md:text-xl font-semibold'>{test.decription}</p>
+              <div key={index} className=' bg-slate-200 text-black  p-4'>
+                <div className='flex flex-row gap-4 justify-center items-center'>
+                  <i className={`fa-solid ${test.icon} text-4xl text-blue-500`}></i>
+                  <h1 className='text-lg md:text-3xl font-bold leading-relaxed'>{test.numbers}</h1>
+                </div>
+                <p className='text-base md:text-lg '>{test.decription}</p>
               </div>
             ))}
 
@@ -227,13 +239,13 @@ export default function Home() {
 
       {/* testimonials section */}
 
-      <section className='mx-6 shadow-xl py-16 mb-16 rounded-md bg-gray-100 text-black'>
+      <section className='py-16 mb-16 rounded-md text-orange-400'>
         <div>
 
           <h1 className='text-xl md:text-4xl font-bold mb-4 text-center '>Real Voices</h1>
           <p className='text-lg md:tex-xl font-semibold text-center '>What our customers say about us</p>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 items-center mt-20 '>
+          <div className='grid grid-cols-1 md:grid-cols-3 px-6 gap-8 items-center mt-20 '>
 
             {Profiles.map((profile, index) => (
               <div key={index} className='border rounded-md p-4 bg-slate-900 text-white'>
@@ -263,90 +275,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-
-      <footer className='bg-slate-900 text-white'>
-        <div className='px-12 py-20'>
-
-          <h2 className='text-xl md:text-3xl font-bold mb-4'>Stay Informed always</h2>
-          <p className='text-lg'>Get updates on our latest offers and cleaning tips.</p>
-
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-10 py-16 ">
-            <div className='col-span-2 md:col-span-1 flex flex-row gap-4 '>
-              <a href="/" >
-                <img src={logo} alt="Logo" className='w-16 h-16  ' />
-              </a>
-              <h1 className='text-4xl font-bold text-orange-400'>Geel</h1>
-            </div>
-
-
-            <div className='flex flex-col space-y-3 items-start justify-between'>
-              <h2 className='text-lg mf:text-2xl font-bold mb-4'>
-                Services
-              </h2>
-              <a href="" className='hover:text-orange-400 transition-colors'>
-                Interior wash
-              </a>
-              <a href="">Exterior wash</a>
-              <a href="">Full Detailing</a>
-              <a href="">Waxing</a>
-              <a href="">Service details</a>
-            </div>
-
-            <div className='flex flex-col space-y-3 items-start justify-between'>
-              <h2 className='text-lg mf:text-2xl font-bold mb-4'>Company</h2>
-              <a href="">About us</a>
-              <a href="">Our process</a>
-              <a href="">Why choose us</a>
-              <a href="">Contact us</a>
-              <a href="">Get in touch</a>
-            </div>
-
-            <div className='flex flex-col space-y-3 items-start justify-between'>
-              <h2 className='text-lg mf:text-2xl font-bold mb-4'>Suport</h2>
-              <a href="">Help center</a>
-              <a href="">FAQ</a>
-              <a href="">Booking help</a>
-              <a href="">Pricing info</a>
-              <a href="">Track your order</a>
-            </div>
-
-            <div className='flex flex-col spac-y-3 items-start justify-between'>
-              <h2 className='text-lg mf:text-2xl font-bold mb-4'>Contact</h2>
-              <a href="">Facebook</a>
-              <a href="">Instagram</a>
-              <a href="">Twitter</a>
-              <a href="">LinkedIn </a>
-              <a href="">Contact Suport</a>
-            </div>
-
-          </div>
-
-          <div className='py-6 border-t grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
-            <h2 className='text-center md:text-start'>© 2026 Hand Car Wash Geel</h2>
-
-            <div className='flex flex-row gap-6 justify-center md:justify-end px-12 '>
-              <a href="" className=''>
-                <FaFacebook className='text-2xl hover:text-blue-500 ' />
-              </a>
-
-              <a href="">
-                <FaInstagram className='text-2xl  hover:text-red-400' />
-              </a>
-
-              <a href="">
-                <FaTwitter className='text-2xl hover:text-sky-300 ' />
-              </a>
-
-              <a href="">
-                <FaLinkedin className='text-2xl hover:text-blue-400 ' />
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </footer>
     </div>
   )
 }
