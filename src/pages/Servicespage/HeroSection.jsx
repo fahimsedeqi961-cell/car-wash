@@ -4,6 +4,7 @@ import serviceHimage from '../../assets/SHImage3.jpeg'
 export default function HeroSection() {
   return (
     <div>
+
       {/*Services Hero Section*/}
       <section className=" md:min-h-[80vh] border-b md:py-12 md:px-8">
         <div className="">
@@ -41,9 +42,6 @@ export default function HeroSection() {
           </div>
         </div>
       </section>
-
     </div>
-
-
-  )
+  );
 }
