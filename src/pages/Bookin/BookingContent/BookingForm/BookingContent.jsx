@@ -25,7 +25,7 @@ export default function Booking() {
     <div>
       <BookingHero />
       <BookingSteps />
-      <div className="grid grid-cols-[2fr_1fr] gap-12 m-8">
+      <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] md:gap-12 m-8">
         <div>
           <ServiceSelection
             setBookingData={setBookingData}
@@ -56,11 +56,11 @@ export default function Booking() {
       />
 
       <div>
-        <h2 className="text-lg font-semibold px-6 py-2 bg-gray-200 border">
+        <h2 className="text-lg font-semibold px-6 py-4 text-white bg-slate-800 border">
           Payment Methods
         </h2>
 
-        <div className="grid grid-cols-[1fr_2fr] gap-8 py-8 border-b-2 border-white  ">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 py-8 border-b-2  border-white  ">
           <PaymentMethod
             setBookingData={setBookingData}
             bookingData={bookingData}

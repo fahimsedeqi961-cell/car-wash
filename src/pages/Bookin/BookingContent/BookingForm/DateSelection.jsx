@@ -23,28 +23,42 @@ export default function DateSelection({ bookingData, setBookingData }) {
 
   return (
     <section>
-      <div className="border mb-8">
-        <h2 className="text-lg font-semibold p-2 bg-slate-100 border-b">Select Date & Time</h2>
-        <div className="m-8 flex gap-12">
+      <div className="border mb-8 rounded-md">
+        <h2 className="text-lg font-semibold p-4 bg-slate-800 text-white border-b">Select Date & Time</h2>
+        <div className="m-8 flex flex-col md:flex-row md:gap-12">
 
           <Calendar
             name="date"
             value={bookingData.date}
             minDate={new Date()}
             onChange={(date) => handleDate(date)}
-            className="bg-slate-100 p-4 shadow rounded "
+            className="bg-slate-500 p-4 shadow rounded "
           />
 
-          <div className="flex items-center justify-between gap-8">
-            <label htmlFor="" className=" text-base font-semibold">Select Time :</label>
-            <input
-              type="time"
-              name="time"
-              value={bookingData.time}
-              onChange={handleTime}
-              className="rounded border p-2 w-60  "
-            />
+          <div className="flex flex-col md:gap-8 justify-center py-8 ">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-8 md:mb-6">
+              <label htmlFor="" className=" text-base font-semibold">Select Time :</label>
+              <input
+                type="time"
+                name="time"
+                value={bookingData.time}
+                onChange={handleTime}
+                className="rounded border p-2 w-60  "
+              />
 
+            </div>
+            <div className="hidden md:flex flex-row gap-8  justify-between text-white font-semibold items-center">
+              <button className="px-4 py-2 rounded-md bg-orange-400 cursor-pointer hover:bg-orange-500">
+                10 : 00
+              </button>
+              <button className="px-4 py-2 rounded-md bg-orange-400 cursor-pointer hover:bg-orange-500">
+                11 : 00
+              </button>
+              <button className="px-4 py-2 rounded-md bg-orange-400 cursor-pointer hover:bg-orange-500">
+                12 : 00
+              </button>
+
+            </div>
           </div>
         </div>
 

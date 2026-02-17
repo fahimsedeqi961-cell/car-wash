@@ -150,7 +150,7 @@ export default function Home() {
 
               <div
                 key={index}
-                className={`relative overflow-hidden rounded-md min-h-[350px] flex 
+                className={`relative overflow-hidden rounded-md min-h-90 flex 
                   ${index === 0 ? 'md:col-span-1 lg:col-span-1' : 'md:col-span-1'
                   }`}
               >
@@ -169,7 +169,7 @@ export default function Home() {
                   text-white p-4 md:p-6 w-full justify-center 
                     text-center items-center lg:items-start lg:text-left border rounded-md '
                 >
-                  <h1 className='text-xl md:text-2xl font-bold md:w-60 lg:max-w-[280px] '>{review.title}</h1>
+                  <h1 className='text-xl md:text-2xl font-bold md:w-60 lg:max-w-72 '>{review.title}</h1>
                   <p className='text-base font-medium opacity-90 mb-4'>{review.description}</p>
 
                   <a href="#" className='group flex items-center gap-1 text-lg font-semibold mt-8 hover:text-orange-400 transition-colors '>

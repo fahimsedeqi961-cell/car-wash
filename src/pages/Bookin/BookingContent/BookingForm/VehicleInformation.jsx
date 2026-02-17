@@ -13,40 +13,47 @@ export default function VehicleInformation({ bookingData, setBookingData }) {
     <section>
 
       {/* Vehivle Information */}
-      <form action="" className="border space-y-6 mb-8">
-        <h2 className="text-lg font-semibold bg-slate-100 p-4 border-b ">Vehicle Information</h2>
+      <form action="" className="border rounded-md  mb-8">
 
-        <div className="flex items-center gap-4 m-6">
-          <label htmlFor="" className="text-lg w-30 text-semibold">Vehicle Type</label>
+        <h2 className="text-lg font-semibold bg-slate-800 text-white p-4 border-b rounded-t-md ">Vehicle Information</h2>
 
-          <select
-            name="vehicle"
-            value={bookingData.vehicle}
-            onChange={handleOnChange}
-            className="w-100 border p-2 rounded-sm focus:outline-none focus:ring-0"
-          >
-            <option value="" className="">Select vehicle</option>
-            <option value="saden">saden</option>
-            <option value="vue">Vue</option>
-            <option value="truck">Truck</option>
-          </select>
+        <div className="flex flex-col md:gap-6 md:m-6 p-4">
+
+          <div className="flex flex-col md:flex-row gap-4 mb-4 ">
+            <label htmlFor="" className="text-base md:text-lg md:w-30 md:font-semibold">Vehicle Type</label>
+
+            <select
+              name="vehicle"
+              value={bookingData.vehicle}
+              onChange={handleOnChange}
+              className="md:w-100 border md:p-2 rounded-sm focus:outline-none focus:ring-0"
+            >
+              <option value="" className="">Select vehicle</option>
+              <option value="saden">saden</option>
+              <option value="vue">Vue</option>
+              <option value="truck">Truck</option>
+            </select>
+
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-4 mb-4">
+            <label htmlFor="" className="md:w-30 md:text-lg md:font-semibold">License Plate</label>
+            <input
+              type="text"
+              name="license_plate"
+              value={bookingData.license_plate}
+              onChange={handleOnChange}
+              className="md:w-100 border rounded-sm md:p-2 focus:outline-none" />
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-4 md:justify-end ">
+            <label htmlFor="" className="md:w-30 md:font-semibold md:text-lg">Special Note</label>
+            <textarea name="Notes" className="border rounded md:flex-1 p-2 focus:outline-none" />
+          </div>
+
 
         </div>
 
-        <div className="flex items-center gap-4 mx-6">
-          <label htmlFor="" className="w-30">License Plate</label>
-          <input
-            type="text"
-            name="license_plate"
-            value={bookingData.license_plate}
-            onChange={handleOnChange}
-            className="w-100 border rounded-sm  p-2 focus:outline-none" />
-        </div>
-
-        <div className="flex items-center gap-4 m-6 ">
-          <label htmlFor="" className="w-30">Special Note</label>
-          <textarea name="Notes" className="border rounded flex-1 p-2 focus:outline-none" />
-        </div>
       </form>
     </section>
   );

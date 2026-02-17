@@ -1,9 +1,17 @@
-export default function PaymentMethod({ bookingData, setbookingData }) {
+export default function PaymentMethod({ bookingData, setBookingData }) {
 
   const handelOnChange = (e) => {
-    setbookingData(
-      { ...bookingData, [e.target.name]: e.target.value }
-    )
+    const { value } = e.target;
+    console.log(e.target.value);
+
+    setBookingData((prev) => (
+      {
+        ...prev,
+        payment: value
+
+      }
+    ))
+    console.log(bookingData.payment)
   };
 
   return (
@@ -38,8 +46,8 @@ export default function PaymentMethod({ bookingData, setbookingData }) {
             <input
               type="radio"
               name="payment"
-              value="online transfer"
-              checked={bookingData.payment === "online transfer"}
+              value="online"
+              checked={bookingData.payment === "online"}
               onChange={handelOnChange}
               className="w-5 h-5"
             />
