@@ -11,7 +11,10 @@ export default function CustomerInformation({ bookingData, setBookingData }) {
       <div className="">
         {/* Customer Information */}
 
-        <h2 className="text-lg font-semibold bg-slate-800 text-white py-4 px-6 border border-gray-600">Your Information</h2>
+        <h2 className="text-lg font-semibold bg-orange-400 text-white py-4 px-6 border border-gray-600">
+          Your Information
+        </h2>
+
         <form action="" className="m-8 space-y-4 md:space-y-6 " >
 
           <div className="flex flex-col md:flex-row md:items-center gap-4">

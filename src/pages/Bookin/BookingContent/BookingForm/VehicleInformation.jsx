@@ -15,24 +15,31 @@ export default function VehicleInformation({ bookingData, setBookingData }) {
       {/* Vehivle Information */}
       <form action="" className="border rounded-md  mb-8">
 
-        <h2 className="text-lg font-semibold bg-slate-800 text-white p-4 border-b rounded-t-md ">Vehicle Information</h2>
+        <h2 className="text-lg font-semibold bg-orange-400 text-white p-4 border-b rounded-t-md ">Vehicle Information</h2>
 
         <div className="flex flex-col md:gap-6 md:m-6 p-4">
 
           <div className="flex flex-col md:flex-row gap-4 mb-4 ">
+
             <label htmlFor="" className="text-base md:text-lg md:w-30 md:font-semibold">Vehicle Type</label>
 
-            <select
-              name="vehicle"
-              value={bookingData.vehicle}
-              onChange={handleOnChange}
-              className="md:w-100 border md:p-2 rounded-sm focus:outline-none focus:ring-0"
-            >
-              <option value="" className="">Select vehicle</option>
-              <option value="saden">saden</option>
-              <option value="vue">Vue</option>
-              <option value="truck">Truck</option>
-            </select>
+            <div className="relative  md:w-100">
+              <select
+                name="vehicle"
+                value={bookingData.vehicle}
+                onChange={handleOnChange}
+                className="md:w-full w-full border appearance-none p-2 rounded-sm focus:outline-none focus:ring-0"
+              >
+                <option value="" className="">Select vehicle</option>
+                <option value="saden">saden</option>
+                <option value="vue">Vue</option>
+                <option value="truck">Truck</option>
+              </select>
+
+              <div className="absolute inset-y-0 right-0 px-4 flex border-l items-center pointer-events-none ">
+                ▼
+              </div>
+            </div>
 
           </div>
 
@@ -43,7 +50,7 @@ export default function VehicleInformation({ bookingData, setBookingData }) {
               name="license_plate"
               value={bookingData.license_plate}
               onChange={handleOnChange}
-              className="md:w-100 border rounded-sm md:p-2 focus:outline-none" />
+              className="md:w-100 border rounded-sm p-2 focus:outline-none" />
           </div>
 
           <div className="flex flex-col md:flex-row gap-4 md:justify-end ">

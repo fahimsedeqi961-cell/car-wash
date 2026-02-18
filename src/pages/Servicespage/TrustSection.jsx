@@ -27,7 +27,7 @@ export default function TrustSection() {
 
   return (
     <div>
-      <section className="py-16 px-8  border-t">
+      <section className="py-16 px-8 border-t">
         <div>
           <h2 className="text-2xl md:text-4xl font-bold text-center text-orange-400 mb-16">Why Choose Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 ">

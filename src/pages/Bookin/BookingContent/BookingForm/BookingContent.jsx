@@ -56,7 +56,7 @@ export default function Booking() {
       />
 
       <div>
-        <h2 className="text-lg font-semibold px-6 py-4 text-white bg-slate-800 border">
+        <h2 className="text-lg font-semibold px-6 py-4 text-white bg-orange-400 border">
           Payment Methods
         </h2>
 

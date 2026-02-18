@@ -1,5 +1,6 @@
 
 export default function BookingSummary({ bookingData }) {
+
   const servicePrice = Number(bookingData.price);
   console.log(servicePrice);
   const taxRate = 0.10;
@@ -10,10 +11,14 @@ export default function BookingSummary({ bookingData }) {
 
   return (
     <div className="border  rounded-md">
-      <h1 className="text-lg font-semibold bg-slate-800 p-4 text-white border-b rounded-t">Booking summary</h1>
+      <h1 className="text-lg font-semibold bg-orange-400 p-4 text-white border-b rounded-t">
+        Booking summary
+      </h1>
+
       <div className="flex flex-col justify-center p-6 bg-slate-800 text-white ">
 
         <div className="flex flex-col space-y-4 py-2">
+
           <div className="flex flex-row gap-4 textbase md:text-lg">
             <h3 className="font-semibold">Service:</h3>
             <p className="font-semibold flex-1">{bookingData.service}</p>
@@ -43,16 +48,27 @@ export default function BookingSummary({ bookingData }) {
 
         <div className="flex flex-row gap-4 justify-between border-t py-2">
           <h3 className="md:text-lg font-semibold w-15">Tax(10%):</h3>
-          <p className="text-lg font-semibold">${servicePrice * taxRate}</p>
+          {servicePrice ?
+            <p className="text-lg font-semibold">${servicePrice * taxRate}</p>
+            :
+            <p className="text-lg font-semibold">$ 0</p>
+          }
         </div>
 
         <div className="flex flex-row gap-4 mb-4 justify-between border-t py-2">
           <h3 className="text-lg font-bold w-15 ">Total:</h3>
-          <p className="text-lg font-semibold ">${totalPrice.toFixed(2)}</p>
+          {totalPrice ?
+            <p className="text-lg font-semibold ">$ {totalPrice.toFixed(2)}</p>
+            :
+            <p className="text-lg semibold">$ 0</p>}
         </div>
 
-        <button className="px-4 py-2 text-white font-semibold bg-orange-400 hover:bg-orange-500 cursor-pointer">Edit Selection</button>
+        <button
+          className="px-4 py-2 text-white font-semibold bg-orange-400 hover:bg-orange-500 cursor-pointer">
+          Edit Selection
+        </button>
       </div>
+
     </div>
   )
-}
+};

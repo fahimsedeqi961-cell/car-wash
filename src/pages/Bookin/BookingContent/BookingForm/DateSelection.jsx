@@ -24,18 +24,20 @@ export default function DateSelection({ bookingData, setBookingData }) {
   return (
     <section>
       <div className="border mb-8 rounded-md">
-        <h2 className="text-lg font-semibold p-4 bg-slate-800 text-white border-b">Select Date & Time</h2>
+        <h2 className="text-lg font-semibold p-4 bg-orange-400 text-white border-b">Select Date & Time</h2>
         <div className="m-8 flex flex-col md:flex-row md:gap-12">
 
-          <Calendar
-            name="date"
-            value={bookingData.date}
-            minDate={new Date()}
-            onChange={(date) => handleDate(date)}
-            className="bg-slate-500 p-4 shadow rounded "
-          />
+          <div className="w-full max-w-sm ">
+            <Calendar
+              name="date"
+              value={bookingData.date}
+              minDate={new Date()} // disables the past dates
+              onChange={(date) => handleDate(date)}
+              className="p-6 shadow rounded bg-orange-500 "
+            />
+          </div>
 
-          <div className="flex flex-col md:gap-8 justify-center py-8 ">
+          <div className="flex flex-col md:gap-8 justify-center py-8 bg-slate-50 ">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-8 md:mb-6">
               <label htmlFor="" className=" text-base font-semibold">Select Time :</label>
               <input

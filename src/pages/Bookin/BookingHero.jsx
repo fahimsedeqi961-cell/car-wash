@@ -6,12 +6,12 @@ export default function BookingHero() {
         <div className="">
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 items-center mx-8 md:py-0 py-8">
 
-            <div className='md:px-8 p-4 text-center'>
+            <div className='md:px-8 p-4 text-left'>
               <h1 className="text-2xl md:text-5xl font-bold text-orange-400 mb-4 ">Book Yor Car a Wash </h1>
               <p className="md:text-lg md:mb-16 mb-6 ">
                 Book your car wash in just a few clicks and let our experts bring back your vehicle’s spotless shine.
               </p>
-              <button className='p-2 md:px-4 py-2 rounded-3xl bg-orange-400 text-white font-semibold cursor-pointer hover:bg-orange-500'>
+              <button className='p-2 md:px-4 py-2 rounded-3xl bg-orange-400 text-sm text-white font-semibold cursor-pointer hover:bg-orange-300'>
                 Book Now
               </button>
             </div>
