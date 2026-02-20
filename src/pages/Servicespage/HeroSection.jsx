@@ -6,13 +6,14 @@ export default function HeroSection() {
     <div>
 
       {/*Services Hero Section*/}
-      <section className=" md:min-h-[80vh] border-b md:py-12 md:px-8">
+      <section className="md:min-h-[80vh] border-b md:py-12 md:px-8">
         <div className="">
           <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 ">
             {/* contents container */}
 
             <div className=" relative z-20 text-center md:text-left py-12 md:py-16 px-8 ">
-              <h1 className="text-2xl md:text-5xl max-w-7xl font-bold  text-orange-400 mb-4 md:mb-6 leading-snug ">Professional car wash services</h1>
+              <h1 className="text-2xl md:text-5xl max-w-7xl font-bold font-roboto text-orange-400 mb-4 md:mb-6 leading-snug ">Professional car wash services</h1>
+
               <p className="text-base md:text-lg max-w-md md:max-w-lg text-white md:text-gray-900 mb-8 md:mb-12 ">
                 Experience top-notch car care  that revitalizes
                 your vehicle while prioritizing eco-friendly practices.

@@ -8,6 +8,8 @@ export default function FAskedQuestions() {
     { question: "Can I cancle my booking ?", answer: "Yes you can cancle it." }
   ];
 
+  const trustSignals = ["Secure Booking", "100 % Satisfication Guarantee", "Professional Equipment"];
+
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
@@ -15,25 +17,22 @@ export default function FAskedQuestions() {
     <section>
       <div className="px-8 py-4">
 
-        <div className="flex flex-col md:flex-row  gap-4 md:gap-8 md:justify-center mb-16 border-b pb-8">
-          <div className="flex gap-4 items-center ">
-            <input type="checkbox" className="w-5 h-5" />
-            <label className="text-bases md:text-lg md:font-semibold">Secure Booking</label>
-          </div>
+        <div className="flex flex-col md:flex-row  gap-4 md:gap-8 md:justify-center mb-16 border-b border-gray-300 pb-8">
 
-          <div className="flex gap-4 items-center">
-            <input type="checkbox" className="w-5 h-5 " />
-            <label className="text-base md:text-lg md:font-semibold">100 % Satisfication Guarantee</label>
-          </div>
-
-          <div className="flex gap-4 items-center">
-            <input type="checkbox" className="w-5 h-5" />
-            <label className="text-base md:text-lg md:font-semibold">Professional Equipment</label>
-          </div>
+          {trustSignals.map((signal, index) => (
+            <div
+              key={index}
+              className="flex gap-4 items-center text-gray-700 "
+            >
+              <input type="checkbox" className="w-5 h-5" />
+              <label className="text-bases md:text-lg ">{signal}</label>
+            </div>
+          ))}
 
         </div>
+
         {/* Frequently asked questions */}
-        <div className="flex flex-col space-y-6  border border-gray-500">
+        <div className="flex flex-col space-y-6  border border-gray-400">
 
           <h2 className="text-lg font-semibold text-white bg-orange-400 px-4 py-2 border-b">
             Frequently Asked Question
@@ -42,7 +41,7 @@ export default function FAskedQuestions() {
           {faQuestions.map((fasq, index) => (
             <div
               key={index}
-              className="border m-4 rounded overflow-hidden">
+              className="border border-gray-400 m-4 rounded overflow-hidden">
 
               <div
                 className="flex items-center justify-between p-4 cursor-pointer"
@@ -54,7 +53,7 @@ export default function FAskedQuestions() {
                 </div>
 
                 <i className={`fa-solid 
-                  ${activeIndex === index ? "fa-angle-up" : "fa-angle-down"} text-base`}>
+                  ${activeIndex === index ? "fa-angle-up" : "fa-angle-down"} text-base text-gray-600`}>
 
                 </i>
               </div>

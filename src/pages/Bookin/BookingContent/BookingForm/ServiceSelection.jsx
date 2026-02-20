@@ -31,13 +31,13 @@ export default function ServiceSelection({ setBookingData }) {
   }
   return (
     <section>
-      <div className="border mb-8 rounded-md">
-        <h2 className="text-lg font-semibold mb-8 bg-slate-800 p-4 text-white border-b rounded-t">Choose your service</h2>
+      <div className="border border-gray-300 mb-8 rounded-md">
+        <h2 className="text-lg font-semibold mb-8 bg-slate-100 p-4 text-black border-b border-gray-400  rounded-t">Choose your service</h2>
         <div className="grid grid-rows md:grid-cols-3 gap-6 m-4">
           {services.map((plan, index) => (
             <div
               key={index}
-              className="border flex flex-col space-y-2 p-4 text-center text-white bg-slate-800"
+              className="border flex flex-col space-y-2 p-4 text-center text-white bg-slate-700"
             >
               <h3 className="text-lg font-semibold">{plan.serviceName}</h3>
               <h3 className="text-lg font-semibold">${plan.price}</h3>

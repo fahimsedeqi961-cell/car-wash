@@ -10,12 +10,12 @@ export default function BookingSummary({ bookingData }) {
   console.log(totalPrice.toFixed(2));
 
   return (
-    <div className="border  rounded-md">
-      <h1 className="text-lg font-semibold bg-orange-400 p-4 text-white border-b rounded-t">
+    <div className="border border-gray-600 rounded-md">
+      <h1 className="text-lg font-semibold bg-slate-100 p-4 text-black border-b border-gray-400 rounded-t">
         Booking summary
       </h1>
 
-      <div className="flex flex-col justify-center p-6 bg-slate-800 text-white ">
+      <div className="flex flex-col justify-center p-6 bg-slate-700 text-white ">
 
         <div className="flex flex-col space-y-4 py-2">
 

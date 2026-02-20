@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Navbar from "./components/layout/Navbar"
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import Services from "./pages/Servicespage/Services";
 import BookingContent from "./pages/Bookin/BookingContent/BookingForm/BookingContent"
 import Footer from '../src/components/layout/Footer'
@@ -16,7 +16,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/book" element={<BookingContent />} />
-
         </Routes>
         <Footer />
 

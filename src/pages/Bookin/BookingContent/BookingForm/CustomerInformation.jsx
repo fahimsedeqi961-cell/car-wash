@@ -11,7 +11,7 @@ export default function CustomerInformation({ bookingData, setBookingData }) {
       <div className="">
         {/* Customer Information */}
 
-        <h2 className="text-lg font-semibold bg-orange-400 text-white py-4 px-6 border border-gray-600">
+        <h2 className="text-lg font-semibold bg-slate-100 text-gray-900 py-4 px-6 border border-gray-200">
           Your Information
         </h2>
 

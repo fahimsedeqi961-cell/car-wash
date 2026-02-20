@@ -23,8 +23,8 @@ export default function DateSelection({ bookingData, setBookingData }) {
 
   return (
     <section>
-      <div className="border mb-8 rounded-md">
-        <h2 className="text-lg font-semibold p-4 bg-orange-400 text-white border-b">Select Date & Time</h2>
+      <div className="border border-gray-300 mb-8 rounded-md bg-gray-50">
+        <h2 className="text-lg font-semibold p-4 bg-slate-100 text-gray-900 border-b border-gray-400">Select Date & Time</h2>
         <div className="m-8 flex flex-col md:flex-row md:gap-12">
 
           <div className="w-full max-w-sm ">
@@ -37,7 +37,7 @@ export default function DateSelection({ bookingData, setBookingData }) {
             />
           </div>
 
-          <div className="flex flex-col md:gap-8 justify-center py-8 bg-slate-50 ">
+          <div className="flex flex-col md:gap-8 justify-center py-8  ">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-8 md:mb-6">
               <label htmlFor="" className=" text-base font-semibold">Select Time :</label>
               <input

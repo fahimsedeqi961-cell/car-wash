@@ -56,11 +56,11 @@ export default function Booking() {
       />
 
       <div>
-        <h2 className="text-lg font-semibold px-6 py-4 text-white bg-orange-400 border">
+        <h2 className="text-lg font-semibold px-6 py-4 text-black bg-slate-100 border border-gray-200">
           Payment Methods
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 py-8 border-b-2  border-white  ">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 py-8 border-b-2  bg-gray-50 border-white  ">
           <PaymentMethod
             setBookingData={setBookingData}
             bookingData={bookingData}

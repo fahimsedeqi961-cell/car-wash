@@ -13,15 +13,15 @@ export default function VehicleInformation({ bookingData, setBookingData }) {
     <section>
 
       {/* Vehivle Information */}
-      <form action="" className="border rounded-md  mb-8">
+      <form action="" className="border border-gray-300 bg-gray-50 rounded-md  mb-8">
 
-        <h2 className="text-lg font-semibold bg-orange-400 text-white p-4 border-b rounded-t-md ">Vehicle Information</h2>
+        <h2 className="text-lg font-semibold bg-slate-100 text-black p-4 border-b border-gray-400 rounded-t-md ">Vehicle Information</h2>
 
         <div className="flex flex-col md:gap-6 md:m-6 p-4">
 
           <div className="flex flex-col md:flex-row gap-4 mb-4 ">
 
-            <label htmlFor="" className="text-base md:text-lg md:w-30 md:font-semibold">Vehicle Type</label>
+            <label htmlFor="" className="text-base md:w-30 md:font-semibold">Vehicle Type</label>
 
             <div className="relative  md:w-100">
               <select
@@ -44,7 +44,7 @@ export default function VehicleInformation({ bookingData, setBookingData }) {
           </div>
 
           <div className="flex flex-col md:flex-row gap-4 mb-4">
-            <label htmlFor="" className="md:w-30 md:text-lg md:font-semibold">License Plate</label>
+            <label htmlFor="" className="md:w-30 text-base md:font-semibold">License Plate</label>
             <input
               type="text"
               name="license_plate"
@@ -54,7 +54,7 @@ export default function VehicleInformation({ bookingData, setBookingData }) {
           </div>
 
           <div className="flex flex-col md:flex-row gap-4 md:justify-end ">
-            <label htmlFor="" className="md:w-30 md:font-semibold md:text-lg">Special Note</label>
+            <label htmlFor="" className="md:w-30 md:font-semibold text-base">Special Note</label>
             <textarea name="Notes" className="border rounded md:flex-1 p-2 focus:outline-none" />
           </div>
 

@@ -2,7 +2,6 @@ export default function PaymentMethod({ bookingData, setBookingData }) {
 
   const handelOnChange = (e) => {
     const { value } = e.target;
-    console.log(e.target.value);
 
     setBookingData((prev) => (
       {
@@ -27,7 +26,7 @@ export default function PaymentMethod({ bookingData, setBookingData }) {
               onChange={handelOnChange}
               className="w-5 h-5"
             />
-            <label htmlFor="" className="text-base font-semibold">Pay at Loacation</label>
+            <label htmlFor="" className="text-base font-semibold text-gray-900">Pay at Loacation</label>
           </div>
 
           <div className="flex gap-4 items-center">
@@ -39,7 +38,7 @@ export default function PaymentMethod({ bookingData, setBookingData }) {
               onChange={handelOnChange}
               className="w-5 h-5"
             />
-            <label htmlFor="" className="text-base font-semibold">Credit / Debit card</label>
+            <label htmlFor="" className="text-base font-semibold text-gray-900">Credit / Debit card</label>
           </div>
 
           <div className="flex gap-4 items-center mb-6">
@@ -51,7 +50,7 @@ export default function PaymentMethod({ bookingData, setBookingData }) {
               onChange={handelOnChange}
               className="w-5 h-5"
             />
-            <label htmlFor="" className="text-base font-semibold">Online Transfer</label>
+            <label htmlFor="" className="text-base font-semibold text-gray-900">Online Transfer</label>
           </div>
 
           <button className="px-4 py-2 w-full text-white font-semibold bg-orange-400 hover:bg-orange-500 cursor-pointer">
