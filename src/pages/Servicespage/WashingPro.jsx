@@ -22,9 +22,12 @@ export default function WashingPro() {
                   <i className={`fa-solid ${process.icon} text-4xl text-blue-500 
                     transition-transform duration-200 group-hover:scale-110 group-hover:rotate-6
                   `}></i>
+
                   <h3 className="text-xl font-semibold">{process.title}</h3>
                 </div>
+
                 <hr className="max-w-56 " />
+
                 {index !== proccesses.length - 1 && (
                   <i className={`absolute top-1/2 -right-0.5 
                     fa-solid fa-angle-right text-2xl text-blue-600
