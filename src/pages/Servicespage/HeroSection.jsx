@@ -6,7 +6,7 @@ export default function HeroSection() {
     <div>
 
       {/*Services Hero Section*/}
-      <section className="md:min-h-[80vh] border-b md:py-12 md:px-8">
+      <section className="md:min-h-[80vh] border-b border-gray-400 md:py-12 md:px-8">
         <div className="">
           <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 ">
             {/* contents container */}
@@ -20,13 +20,13 @@ export default function HeroSection() {
               </p>
 
               <div className="z-20">
-                <a href="#"
-                  className="px-6 py-2 mr-4 rounded-3xl bg-orange-400 font-bold text-white hover:bg-orange-500 ">
+                <a href="/book"
+                  className="px-6 py-2 mr-4 rounded-3xl bg-orange-400 font-bold text-white hover:bg-orange-300 transition-colors duration-300 ">
                   Book now
                 </a>
 
                 <a href="#"
-                  className="px-6 py-2 rounded-3xl hidden md:inline-block border font-bold text-black hover:bg-orange-500 hover:text-white  ">
+                  className="px-6 py-2 rounded-3xl hidden md:inline-block border font-bold text-black hover:bg-orange-300 hover:text-white  transition-colors duration-300 ">
                   Learn
                 </a>
               </div>

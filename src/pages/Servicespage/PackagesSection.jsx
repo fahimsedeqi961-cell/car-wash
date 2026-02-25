@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom"
+
 export default function PackageSection() {
+  const navigate = useNavigate();
   const PricePackages = [
     { PlanName: "Besic Plan", price: "15", features: { f1: "Exterior Wash", f2: "Rinse & dry", f3: "Window Clean", f4: "Tire Shine", f5: "Light surface detailing" } },
     { PlanName: "Standard Plan", price: "30", features: { f1: "Exterior Wash & soap", f2: "Tire shine & wheel clean", f3: "Interior vacuum", f4: "Window clean (inside & outside)", f5: "Dashboard wipe down" } },
@@ -30,7 +33,12 @@ export default function PackageSection() {
                   ))}
                 </ul>
 
-                <a href="#" className="text-orange-400 font-semibold text-center">Select a plan</a>
+                <a
+                  href="#serviceSelection"
+                  onClick={() => navigate('/book')}
+                  className="text-orange-400 font-semibold text-center">
+                  Select a plan
+                </a>
 
               </div>
             ))}

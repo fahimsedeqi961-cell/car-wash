@@ -8,10 +8,14 @@ import CustomerInformation from "./CustomerInformation";
 import PaymentMethod from "./PaymentMethod";
 import FAskedQuestions from "./FAQSection";
 import { useState } from "react";
+import EditBooking from "./EditBooking";
+
+
 export default function Booking() {
 
   const [bookingData, setBookingData] = useState({
     service: "",
+    price: "",
     vehicle: "",
     date: "",
     time: "",
@@ -19,12 +23,17 @@ export default function Booking() {
     email: "",
     phone: "",
     payment: "",
-  })
+  });
+
+  const [editBooking, setEditBooking] = useState(false);
+
 
   return (
     <div>
       <BookingHero />
       <BookingSteps />
+
+      {/* Booking form and summary grid */}
       <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] md:gap-12 m-8">
         <div>
           <ServiceSelection
@@ -43,10 +52,34 @@ export default function Booking() {
 
         </div>
 
+
+
         <div>
+          {editBooking && (
+
+            <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
+              <div className="p-8 bg-white rounded w-180">
+                <EditBooking
+                  bookingData={bookingData}
+                  setEditBooking={setEditBooking}
+                  setBookingData={setBookingData}
+                  onClose={() => setBookingData(false)}
+                />
+
+              </div>
+            </div>
+          )}
+
           <BookingSummary
             bookingData={bookingData}
+            setBookingData={setBookingData}
+            editBooking={editBooking}
+            setEditBooking={setEditBooking}
+            onEdit={() => setBookingData(true)}
           />
+
+
+
         </div>
       </div>
 

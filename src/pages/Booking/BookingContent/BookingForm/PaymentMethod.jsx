@@ -15,7 +15,7 @@ export default function PaymentMethod({ bookingData, setBookingData }) {
 
   return (
     <div>
-      <section>
+      <section id="paymentMethods">
         <div className="space-y-6  px-8">
           <div className="flex gap-4 items-center">
             <input

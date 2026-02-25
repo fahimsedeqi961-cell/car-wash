@@ -28,9 +28,9 @@ export default function VehicleInformation({ bookingData, setBookingData }) {
                 name="vehicle"
                 value={bookingData.vehicle}
                 onChange={handleOnChange}
-                className="md:w-full w-full border appearance-none p-2 rounded-sm focus:outline-none focus:ring-0"
+                className="md:w-full w-full border border-gray-400 appearance-none p-2 rounded-sm focus:outline-none focus:ring-0"
               >
-                <option value="" className="">Select vehicle</option>
+                <option value="" className="text-gray-600">Select vehicle</option>
                 <option value="saden">saden</option>
                 <option value="vue">Vue</option>
                 <option value="truck">Truck</option>
@@ -50,12 +50,12 @@ export default function VehicleInformation({ bookingData, setBookingData }) {
               name="license_plate"
               value={bookingData.license_plate}
               onChange={handleOnChange}
-              className="md:w-100 border rounded-sm p-2 focus:outline-none" />
+              className="md:w-100 border border-gray-400 rounded-sm p-2 focus:outline-none" />
           </div>
 
           <div className="flex flex-col md:flex-row gap-4 md:justify-end ">
             <label htmlFor="" className="md:w-30 md:font-semibold text-base">Special Note</label>
-            <textarea name="Notes" className="border rounded md:flex-1 p-2 focus:outline-none" />
+            <textarea name="Notes" className="border border-gray-400 rounded md:flex-1 p-2 focus:outline-none" />
           </div>
 
 

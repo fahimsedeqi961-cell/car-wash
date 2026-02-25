@@ -7,7 +7,7 @@ export default function CustomerInformation({ bookingData, setBookingData }) {
   }
 
   return (
-    <section className="">
+    <section id="details">
       <div className="">
         {/* Customer Information */}
 
@@ -24,7 +24,7 @@ export default function CustomerInformation({ bookingData, setBookingData }) {
               name="name"
               value={bookingData.name}
               onChange={handleOnchange}
-              className="md:w-86 px-2 border rounded focus:outline-none" />
+              className="md:w-86 px-2 border border-gray-500 rounded focus:outline-none" />
           </div>
 
           <div className="flex flex-col md:flex-row md:items-center gap-4">
@@ -34,7 +34,7 @@ export default function CustomerInformation({ bookingData, setBookingData }) {
               name="email"
               value={bookingData.email}
               onChange={handleOnchange}
-              className="md:w-86 px-2 border rounded focus:outline-none" />
+              className="md:w-86 px-2 border border-gray-500 rounded focus:outline-none" />
           </div>
 
           <div className="flex flex-col md:flex-row md:items-center gap-4">
@@ -44,7 +44,7 @@ export default function CustomerInformation({ bookingData, setBookingData }) {
               name="phone"
               value={bookingData.phone}
               onChange={handleOnchange}
-              className="md:w-86 px-2 border rounded focus:outline-none" />
+              className="md:w-86 px-2 border border-gray-500 rounded focus:outline-none" />
           </div>
         </form>
       </div>

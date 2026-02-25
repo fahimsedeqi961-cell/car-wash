@@ -30,7 +30,7 @@ export default function ServiceSelection({ setBookingData }) {
     ))
   }
   return (
-    <section>
+    <section id="serviceSelection">
       <div className="border border-gray-300 mb-8 rounded-md">
         <h2 className="text-lg font-semibold mb-8 bg-slate-100 p-4 text-black border-b border-gray-400  rounded-t">Choose your service</h2>
         <div className="grid grid-rows md:grid-cols-3 gap-6 m-4">

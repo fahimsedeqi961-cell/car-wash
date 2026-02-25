@@ -53,12 +53,9 @@ export default function Testimonials() {
                   </div>
                 </div>
 
-                <a href="#" className='hover:underline '>
+                <a href="#" className='flex gap-1 group items-center  hover:text-orange-400 transition-colors duration-300 '>
                   View full story
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
-                    className="size-4  text-semibold text-white inline-block">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                  </svg>
+                  <i className='fa-solid fa-angle-right text-sm mt-2'></i>
                 </a>
               </div>
 

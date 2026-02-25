@@ -31,12 +31,12 @@ export default function HomeHero() {
             <div className='flex flex-row gap-8'>
 
               <a href='/book'
-                className="px-6 py-2 mt-4 ml-2 rounded-3xl bg-orange-400 hover:bg-orange-300  text-white font-bold cursor-pointer">
+                className="px-6 py-2 mt-4 ml-2 rounded-3xl bg-orange-400 hover:bg-orange-300 transition-colors duration-300  text-white font-bold cursor-pointer">
                 Book Now
               </a>
 
               <a href='/book'
-                className="px-6 py-2 mt-4 hidden md:inline-block rounded-3xl border hover:bg-orange-400 hover:text-white  text-black font-semibold cursor-pointer transition-colors duration-300">
+                className="px-6 py-2 mt-4 hidden md:inline-block rounded-3xl border hover:bg-orange-300  hover:text-white  text-black font-semibold cursor-pointer transition-colors duration-300">
                 Learn More
               </a>
 

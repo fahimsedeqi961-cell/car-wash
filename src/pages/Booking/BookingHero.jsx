@@ -11,9 +11,9 @@ export default function BookingHero() {
               <p className="md:text-lg md:mb-16 mb-6 ">
                 Book your car wash in just a few clicks and let our experts bring back your vehicle’s spotless shine.
               </p>
-              <button className='p-2 md:px-4 py-2 rounded-3xl bg-orange-400 text-base text-white font-semibold cursor-pointer hover:bg-orange-300'>
+              <a href='#serviceSelection' className='p-2 md:px-4 py-2 rounded-3xl  bg-orange-400 text-base text-white font-semibold cursor-pointer hover:bg-orange-300'>
                 Book Now
-              </button>
+              </a >
             </div>
 
             <div>

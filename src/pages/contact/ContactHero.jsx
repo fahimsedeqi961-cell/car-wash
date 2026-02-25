@@ -1,31 +1,26 @@
-import HeroImage from "../../assets/contactImage4.jfif"
+import HeroImage from "../../assets/contact3.jpg"
 
 export default function ContactHero() {
+
   return (
     <>
-      <main className="">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-center p-8 bg-slate-50">
+      <main className="mb-16">
+
+        <div className="py-16 px-8 bg-slate-900 text-center">
+
           {/* Content  */}
 
-          <div className="flex flex-col space-y-6 p-4 items-center bg-slate-50 justify-center">
-            <h1 className="text-2xl font-bold text-orange-400 md:text-5xl">Contact Us</h1>
-            <p className="text-base font-semibold text-gray-800 md:text-lg">We are here to help Reach out anytime.</p>
+          <div className="relative flex flex-col space-y-6 py-16 px-6 items-center justify-center">
+            <h1 className="text-2xl font-bold text-orange-400 md:text-5xl">Get In Touch Now </h1>
+            <p className="text-base font-semibold text-white md:text-lg mb-12">We are here to help, Reach out anytime.</p>
+
+            <a href="#contact-form"
+              className="text-base font-semibold text-white px-4 py-2 bg-orange-400 hover:bg-orange-300 cursor-pointer"
+            >
+              Contact Now
+            </a >
           </div>
-
-          {/* Hero Image */}
-
-          <div>
-            <img
-              src={HeroImage}
-              alt="Not avialable"
-              className="w-full object-cover"
-            />
-          </div>
-
-
         </div>
-
-
       </main>
 
     </>

@@ -19,10 +19,10 @@ export default function CoreServices() {
 
       {/**Services Section*/}
 
-      <section className='bg-slate-50 py-12 p-4 md:p-6 '>
+      <section className='bg-slate-50 py-16 p-4 md:p-6 '>
         <div className=''>
 
-          <div className='flex flex-col items-center text-orange-400 gap-4 justify-center'>
+          <div className='flex flex-col items-center text-orange-400 gap-4 justify-center mb-8'>
             <h1 className='text-base md:text-2xl text-center'>Services</h1>
             <h1 className='text-2xl font-bold md:text-3xl text-center'>What we do best</h1>
             <p className='text-lg text-center'>Four ways to keep your car looking sharp</p>
@@ -43,11 +43,9 @@ export default function CoreServices() {
                   <p className='text-base w-62 '>{service.description}</p>
                 </div>
 
-                <a href="/services" className='px-4 pb-4'>
+                <a href="/services" className='group flex gap-2 px-4 pb-4 items-center justify-center hover:text-orange-400 transition-all duration-300 '>
                   Learn
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-gray-800 text-semibold  inline-block">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                  </svg>
+                  <i className='fa-solid fa-angle-right text-sm mt-1 text-gray-600 '></i>
                 </a>
               </div>
 

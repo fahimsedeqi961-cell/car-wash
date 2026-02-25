@@ -26,16 +26,16 @@ export default function Features() {
     <>
       {/* Reviews sections */}
 
-      <section className='py-12 border-b min-h-[50vh] md:min-h-[80vh]'>
+      <section className='py-12 border-b border-gray-400 min-h-[50vh] md:min-h-[80vh]'>
 
         <div className='px-4 '>
-          <div className='flex flex-col gap-4 text-orange-400 items-center text-center justify-center'>
+          <div className='flex flex-col gap-4 text-orange-400 items-center text-center justify-center mb-16'>
             <h1 className='text-lg md:text-xl'>Why</h1>
             <h1 className='text-2xl font-bold md:text-3xl '>We do it right</h1>
             <p className='text-base font-semibold md:text-xl '>Hand washing beats machines every time for real results.</p>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] gap-4 py-8 '>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] gap-4 my-8'>
 
             {reviews.map((review, index) => (
 
@@ -57,7 +57,7 @@ export default function Features() {
 
                 {/* Content */}
                 <div className='relative z-20 flex flex-col gap-4 md:gap-6 
-                  text-white p-4 md:p-6 w-full justify-center 
+                  text-white p-4 md:px-6 w-full justify-end 
                     text-center items-center lg:items-start lg:text-left border rounded-md '
                 >
                   <h1 className='text-xl md:text-2xl font-bold md:w-60 lg:max-w-72 '>{review.title}</h1>
@@ -65,10 +65,7 @@ export default function Features() {
 
                   <a href="#" className='group flex items-center gap-1 text-lg font-semibold mt-8 hover:text-orange-400 transition-colors '>
                     Learn
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
-                      className="size-4 text-semibold text-white transition-transform group-hover:translate-x-1">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                    </svg>
+                    <i className='fa-solid fa-angle-right text-sm mt-1'></i>
                   </a>
                 </div>
               </div>

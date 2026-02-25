@@ -18,7 +18,7 @@ export default function ServicesGrid() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 ">
 
           {services.map((service, index) => (
-            <div className="">
+            <div className="" key={index}>
               <div
                 key={index}
                 className="relative group p-6 border rounded-lg bg-slate-800 text-white text-center
