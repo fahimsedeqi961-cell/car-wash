@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 export default function Footer() {
   return (
     <footer className='bg-slate-900 text-white'>
-      <div className='px-12 py-16'>
+      <div className='p-12 '>
 
         <h2 className='text-xl md:text-3xl font-bold mb-4'>Stay Informed always</h2>
         <p className='text-lg'>Get updates on our latest offers and cleaning tips.</p>
@@ -60,7 +60,7 @@ export default function Footer() {
 
         </div>
 
-        <div className='py-6 border-t grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
+        <div className='pt-4 border-t grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
           <h2 className='text-center md:text-start'>© 2026 Hand Car Wash Geel</h2>
 
           <div className='flex flex-row gap-6 justify-center md:justify-end px-12 '>

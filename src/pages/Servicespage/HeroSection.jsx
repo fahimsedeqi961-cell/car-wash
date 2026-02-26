@@ -6,41 +6,40 @@ export default function HeroSection() {
     <div>
 
       {/*Services Hero Section*/}
-      <section className="md:min-h-[80vh] border-b border-gray-400 md:py-12 md:px-8">
-        <div className="">
-          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 ">
-            {/* contents container */}
+      <section className="md:min-h-[80vh] border-b border-gray-400 mt-8 md:mt-20 ">
+        <div className="relative w-full h-full ">
 
-            <div className=" relative z-20 text-center md:text-left py-12 md:py-16 px-8 ">
-              <h1 className="text-2xl md:text-5xl max-w-7xl font-bold font-roboto text-orange-400 mb-4 md:mb-6 leading-snug ">Professional car wash services</h1>
+          {/* contents container */}
 
-              <p className="text-base md:text-lg max-w-md md:max-w-lg text-white md:text-gray-900 mb-8 md:mb-12 ">
-                Experience top-notch car care  that revitalizes
-                your vehicle while prioritizing eco-friendly practices.
-              </p>
+          <div className=" relative z-20 text-center md:text-left py-12 px-8 md:py-16 md:px-12 ">
+            <h1 className="text-2xl md:text-5xl max-w-xl font-bold font-roboto text-orange-400 mb-4 md:mb-6 leading-snug ">Professional car wash services</h1>
 
-              <div className="z-20">
-                <a href="/book"
-                  className="px-6 py-2 mr-4 rounded-3xl bg-orange-400 font-bold text-white hover:bg-orange-300 transition-colors duration-300 ">
-                  Book now
-                </a>
+            <p className="text-base md:text-lg max-w-md md:max-w-lg text-white mb-8 md:mb-12 ">
+              Experience top-notch car care  that revitalizes
+              your vehicle while prioritizing eco-friendly practices.
+            </p>
 
-                <a href="#"
-                  className="px-6 py-2 rounded-3xl hidden md:inline-block border font-bold text-black hover:bg-orange-300 hover:text-white  transition-colors duration-300 ">
-                  Learn
-                </a>
-              </div>
+            <div className="z-20">
+              <a href="/book"
+                className="px-6 py-2 mr-4 rounded-3xl bg-orange-400 font-bold text-white hover:bg-orange-300 transition-colors duration-300 ">
+                Book now
+              </a>
+
+              <a href="#"
+                className="px-6 py-2 rounded-3xl hidden md:inline-block border font-bold text-black hover:bg-orange-300 hover:text-white  transition-colors duration-300 ">
+                Learn
+              </a>
             </div>
-
-
-            {/* Image container */}
-            <div className="absolute inset-0 md:relative z-10 md:z-0 ">
-              <img src={serviceHimage} alt="Hero Image" className="w-full h-full object-cover " />
-
-              <div className="absolute inset-0 bg-black/60 md:hidden"></div>
-            </div>
-
           </div>
+
+
+          {/* Image container */}
+          <div className="">
+            <img src={serviceHimage} alt="Hero Image" className="absolute inset-0 z-0 w-full h-full md:h-[80vh] object-cover  " />
+
+            <div className="absolute inset-0 bg-black/60 md:hidden"></div>
+          </div>
+
         </div>
       </section>
     </div>

@@ -12,7 +12,7 @@ export default function ServicesGrid() {
   return (
     <div>
       {/* Services grid  */}
-      <section className="py-12 bg-white">
+      <section className="py-16 bg-slate-100">
         <h2 className="text-2xl md:text-4xl text-orange-400 font-bold text-center mb-16">Our Services</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 ">

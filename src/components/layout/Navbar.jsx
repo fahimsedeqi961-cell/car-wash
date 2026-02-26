@@ -12,7 +12,7 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <header className=' relative  z-50 px-4 md:px-6 py-2 w-full h-auto bg-slate-900  border-b-2 border-white flex flex-row justify-between items-center text-white'>
+    <header className='fixed top-0 z-50 px-4 md:px-6 py-2 w-full h-auto bg-slate-900  border-b-2 border-white flex flex-row justify-between items-center text-white'>
 
       <div className='flex justify-start items-center max-w-200 '>
         <Link to="/">

@@ -45,7 +45,7 @@ export default function CoreServices() {
 
                 <a href="/services" className='group flex gap-2 px-4 pb-4 items-center justify-center hover:text-orange-400 transition-all duration-300 '>
                   Learn
-                  <i className='fa-solid fa-angle-right text-sm mt-1 text-gray-600 '></i>
+                  <i className='fa-solid fa-angle-right text-sm mt-1 text-gray-600 group-hover:text-orange-400 '></i>
                 </a>
               </div>
 

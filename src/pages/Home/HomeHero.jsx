@@ -6,7 +6,7 @@ export default function HomeHero() {
     <div>
       {/**Hero section */}
 
-      <section className='md:min-h-[80vh] border-b border-gray-300 md:mb-16 '>
+      <section className='md:min-h-[80vh] border-b border-gray-300 mt-8 md:mt-16'>
 
         <div className="relative grid md:grid-cols-2 gap-8 overflow-hidden md:py-8 ">
 
@@ -15,7 +15,7 @@ export default function HomeHero() {
           <div
             className="relative z-20 flex flex-col gap-4 md:gap-8 p-6 md:px-12 mt-12 lg:py-16 
                 text-center items-center md:items-start
-                 md:text-left  md:bg-slate-50 
+                 md:text-left  
                 text-white md:text-black"
           >
 
@@ -31,7 +31,7 @@ export default function HomeHero() {
             <div className='flex flex-row gap-8'>
 
               <a href='/book'
-                className="px-6 py-2 mt-4 ml-2 rounded-3xl bg-orange-400 hover:bg-orange-300 transition-colors duration-300  text-white font-bold cursor-pointer">
+                className="px-6 py-2 mt-4 ml-2 rounded-3xl bg-orange-400 hover:bg-orange-300 transition-colors duration-300  text-white font-semibold cursor-pointer">
                 Book Now
               </a>
 

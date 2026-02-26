@@ -49,7 +49,7 @@ export default function FAskedQuestions() {
               >
                 <div className="flex itmes-center gap-4">
                   <input type="checkbox" />
-                  <p className="text-lg">{fasq.question}</p>
+                  <p className="text-sm md:text-base">{fasq.question}</p>
                 </div>
 
                 <i className={`fa-solid 
@@ -62,7 +62,7 @@ export default function FAskedQuestions() {
                 className={`transition-all duration-300 overflow-hidden
                 ${activeIndex === index ? "max-h-40 p-4 top-0" : "max-h-0 "}`}
               >
-                <p className="text-lg">{fasq.answer}</p>
+                <p className="text-base">{fasq.answer}</p>
 
               </div>
 
