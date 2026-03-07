@@ -19,24 +19,27 @@ export default function WashingPro() {
                 key={index}
                 className="relative group p-6 rounded-md  ">
                 <div className="flex flex-row gap-4 items-center justify-start py-4">
-                  <i className={`fa-solid ${process.icon} text-4xl text-blue-500 
+                  <i className={`fa-solid ${process.icon} text-3xl md:text-4xl text-blue-500 
                     transition-transform duration-200 group-hover:scale-110 group-hover:rotate-6
                   `}></i>
 
                   <h3 className="text-xl font-semibold">{process.title}</h3>
                 </div>
 
-                <hr className="max-w-56 " />
+                <hr className="max-w-56 text-gray-400" />
 
                 {index !== proccesses.length - 1 && (
-                  <i className={`absolute top-1/2 -right-0.5 
-                    fa-solid fa-angle-right text-2xl text-blue-600
-                    transition-transform group-hover:translate-x-1 
-                    hidden lg:block`
-                  }
-                  ></i>
+                  <>
 
+                    <i
+                      className="hidden md:block absolute md:top-1/2 md:-right-0.5 
+                      fa-solid fa-angle-right text-2xl text-blue-600
+                      transition-transform group-hover:translate-x-1
+                      "
+                    ></i>
+                  </>
                 )}
+
                 <p className="text-base text-gray-700">{process.description}</p>
 
               </div>

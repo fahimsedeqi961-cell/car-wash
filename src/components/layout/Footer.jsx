@@ -25,37 +25,38 @@ export default function Footer() {
             <a href="" className='hover:text-orange-400 transition-colors'>
               Interior wash
             </a>
-            <a href="">Exterior wash</a>
-            <a href="">Full Detailing</a>
-            <a href="">Waxing</a>
-            <a href="">Service details</a>
+
+            <a href="#service" className='hover:text-orange-400 transition-colors duration-300'>Exterior wash</a>
+            <a href="#service" className='hover:text-orange-400 transition-colors duration-300'>Full Detailing</a>
+            <a href="#service" className='hover:text-orange-400 transition-colors duration-300'>Waxing</a>
+            <a href="#service" className='hover:text-orange-400 transition-colors duration-300'>Service details</a>
           </div>
 
           <div className='flex flex-col space-y-3 items-start justify-between'>
             <h2 className='text-lg mf:text-2xl font-bold mb-4'>Company</h2>
-            <a href="">About us</a>
-            <a href="">Our process</a>
-            <a href="">Why choose us</a>
-            <a href="">Contact us</a>
-            <a href="">Get in touch</a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>About us</a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>Our process</a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>Why choose us</a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>Contact us</a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>Get in touch</a>
           </div>
 
           <div className='flex flex-col space-y-3 items-start justify-between'>
             <h2 className='text-lg mf:text-2xl font-bold mb-4'>Suport</h2>
-            <a href="">Help center</a>
-            <a href="">FAQ</a>
-            <a href="">Booking help</a>
-            <a href="">Pricing info</a>
-            <a href="">Track your order</a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>Help center</a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>FAQ</a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>Booking help</a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>Pricing info</a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>Track your order</a>
           </div>
 
           <div className='flex flex-col spac-y-3 items-start justify-between'>
             <h2 className='text-lg mf:text-2xl font-bold mb-4'>Contact</h2>
-            <a href="">Facebook</a>
-            <a href="">Instagram</a>
-            <a href="">Twitter</a>
-            <a href="">LinkedIn </a>
-            <a href="">Contact Suport</a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>Facebook</a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>Instagram</a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>Twitter</a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>LinkedIn </a>
+            <a href="" className='hover:text-orange-400 transtion-colors duration-300'>Contact Suport</a>
           </div>
 
         </div>

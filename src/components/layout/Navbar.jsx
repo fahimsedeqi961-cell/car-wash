@@ -42,7 +42,7 @@ export default function Navbar() {
         <Link to="/book" className='font-bold text-white text-lg px-2 py-1 hover:text-orange-400  hover:transition-colors  duration-200'>Book</Link>
         <Link to="/contact" className='font-bold text-white tex-lg px-2 py-1  hover:text-orange-400 hover:transition-colors  duration-200 '>Contact</Link>
         <Link to="/book"
-          className=' hidden md:inline-flex ml-6 font-semibold px-4 py-2 text-white bg-orange-400 rounded-md  hover:bg-orange-600 transition-colors  duration-200 '>
+          className=' hidden md:inline-flex ml-6 font-semibold px-4 py-2 text-white bg-orange-400 rounded-md  hover:bg-orange-300 transition-colors  duration-200 '>
           Book Now
         </Link>
 
