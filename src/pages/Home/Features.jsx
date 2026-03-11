@@ -1,6 +1,6 @@
 import review1 from '../../assets/review4.jpg';
 import review3 from '../../assets/waxing.jpg';
-import review4 from '../../assets/heroImage2.jpg'
+import review4 from '../../assets/coreservices1.jpg'
 
 export default function Features() {
 
