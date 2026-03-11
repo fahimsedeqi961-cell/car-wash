@@ -1,5 +1,5 @@
 import ExteriorWash from '../../assets/ExteriorWash1.jpg';
-import InteriorWash from '../../assets/InteriorWash2.webp';
+import InteriorWash from '../../assets/InteriorWash.webp';
 import FullDetailing from '../../assets/FullDetailing3.jpg';
 import waxing from '../../assets/waxing2.jpg'
 
